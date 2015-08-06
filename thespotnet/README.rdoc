@@ -1,0 +1,195 @@
+= TheSpotNet APIs
+
+== API
+
+=== Accounts endpoint
+
+==== Get User account info    
+    GET: /api/v1/accounts/user
+    parameters:
+      token:    String *required
+    results: 
+      return user data JSON
+      {user_name,email,phone,social,avatar, attend_events, created_events}
+    EX
+    curl -X POST -d 'email=tester@email.com&' http://thespontnet.herokuapp.com/api/v1/customers/vehicle
+
+==== Sign In(from app's account)
+    
+    POST: /api/v1/accounts/sign_in
+    
+    parameters accepted
+      'email'      String,      *required
+      'password'   String,      *requried
+      'reg_id'     String,      *required for pushnotification
+      'dev_id'     String,      *required for indentify the property
+    results:
+      {"success":{"id":"53a911233366390002000000","name":"","email":"tester1@email.com","auth_token":"Czvz82bxs6qUzkxzzaye","role":"cleaner", property_id, messages=>{id, body, level}}}
+    EX: curl -X POST -d 'email=tester1@email.com&password=tester1234&dev_id=1234567890&platform=Android' http://thespotnet.herokuapp.com/api/v1/accounts/sign_in
+
+==== Sign Out
+    POST: 'api/v1/accounts/sign_out'
+
+    parameters accepted
+    'email'      String,      *required
+    EX: curl -X POST -d 'email=tester@email.com' http://the/api/v1/accounts/sign_out
+
+==== Forgotten Password
+    GET: /api/v1/accounts/forgot_password
+    parameters accepted
+      'email'     String,       *required
+    results:
+      {success: 'Email was sent successfully'}
+
+==== Get Last Cleaner from Property
+    GET: /api/v1/accounts/last_cleaner
+    Parameters:
+      auth_token,       String
+      property_id,      String
+    Results:
+      {success=>{id, phone, email}}
+
+
+
+=== WorkOrders endpoint
+==== Create new work order
+    POST: api/v1/work_orders
+    Parameters
+        auth_token,    String
+        property_id,   String
+        location,      String
+        category,      category_id
+        level,         String
+        title,         String
+        details,       String
+    Returns
+      Success String
+
+    EX: curl -X POST -d 'auth_token=user_token&location=location&category=category_id&propert=property_id&title=title&details=details' http://thespotnet.herokuapp.com/api/v1/work_orders
+
+    RESULTS: {success:'Created new work order'}
+
+==== Get Category list
+    GET: api/v1/work_orders/categories
+    Parameters:
+
+    Returns      
+      {success: JSON object}
+
+    EX:http://thespotnet.herokuapp.com/api/v1/work_orders/categories
+
+
+=== Inventories endpoint
+
+==== Get Inventories list
+    GET: /api/v1/inventories
+    Parameters: 
+      auth_token,     String
+    Results: 
+      {"success":[{"name":"teaet","quantity":22}]}
+
+==== Get properties location list
+    GET: /api/v1/inventories/locations
+    Parametesrs:
+      auth_token,     String
+    Results:
+      {id:, propert_id:, location:}
+
+==== Get inventory requests
+    GET: /api/v1/inventories/requests
+    Parameters: 
+      auth_token,     String
+    Results
+      {"success":[{id, ivt_id, quantity, accepted}]}
+      
+==== Send inventory request
+    POST: /api/v1/inventories/requests
+    Parameters:       
+      {
+        auth_token,   String
+        requests=>[
+          {
+            ivt_id: String,
+            location: String,
+            property_id: String,
+            quantity: Integer
+          },
+          {
+            ...
+          },
+          {
+            ...
+          }
+        ]
+      }
+    Results:
+      {success: "Created new request"}
+==== Accept request
+    POST: /api/v1/inventories/accept
+    Parameters:
+      auth_token,        String
+      request_ids,       String
+    Results:
+      {success: "Accepted requests"}
+
+=== Spots endpoint
+==== Send message
+    POST: /api/v1/spots/messages
+    Parameters:
+      auth_token,       String
+      level,            String
+      body,             String
+      receiver_id,      String
+    Results:
+      {success: "Sent message"}
+==== Check message
+    POST: /api/v1/spots/read_message
+    Parameters:
+      auth_token,       String
+      message_id,       String
+    Results:
+      {success: "Checked message"}
+
+==== Get all received message list    
+    GET: /api/v1/spots/messages
+    Parameters:
+      auth_token,       String
+    Results:
+      {success: {id, body, level}}
+
+==== Delete message list    
+    DELETE: /api/v1/spots/messages
+    Parameters:
+      auth_token,       String
+      message_ids,      String
+    Results:
+      {success: "This messages has been deleted"}
+
+==== Get Staff list    
+    GET: /api/v1/spots/staff_list
+    Parameters:
+      auth_token,       String
+    Results:
+      {"success":[{"id":"53ab84d2436875af35060000","name":"cleaner2","role":1}]}
+
+
+=== Lost Found
+==== Create new item
+    POST: /api/v1/lost_founds/
+    Parameters:
+      item_id,          String
+      auth_token,       String
+      item_name,        String
+      description,      String
+      property_id,      String
+    Results:
+      {success=>{id, item_name, description}}
+
+==== Get item list
+  GET: /api/v1/lost_founds/
+    Parameters:
+      auth_token,       String
+      property_id,      String
+    Results:
+      {success=>[{id, item_name, description}, ...]}
+

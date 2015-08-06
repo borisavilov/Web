@@ -1,11 +1,11 @@
-=== Ruby on Rails eCommerce Project(NDA site integrate stripe and use the postgresql)
+Ruby on Rails eCommerce Project(NDA site integrate stripe and use the postgresql)
 ==============================
-# Features include:
+### Features include:
 	* Ruby on Rails
 	* PostgreSQL
 	* Integrate Stripe
 
-# Project SET UP
+### Project SET UP
 
 How not to mess things up while setting up Swapidy from scratch:
 I'm assuming you would be able to clone the file on your computer.
@@ -19,43 +19,43 @@ Now time to hook heroku so that you can deploy
 5) Congrats if you made it this far. Now remember to always git fetch --all before git push heroku master <br />
 
 Everytime you pull, make sure you run the db initialization script: rake swapidy:db:reset
-
 If you don't see any js function getting executed, you should run rake assets:precompile
-
 I create another branch: master-dev
-
 I explain about the git branches in GitHUb
 
 There are 3 branches:
-	1. develop
-	2. master-dev
-	3. master
+
+	1. develop <br />
+	2. master-dev <br />
+	3. master <br />
 
 - Everyone should work on develop branch firstly:
 
-	git checkout -b develop origin/develop
-	git checkout develop (for person who run the above command before)
+	git checkout -b develop origin/develop <br />
+	git checkout develop (for person who run the above command before) <br />
 
 - Every commits in development will be pushed into develop branch:
 
-	git commit -a -m "Comment description"
-	git push origin develop
+	git commit -a -m "Comment description" <br />
+	git push origin develop <br />
 
 - For testing in swapidy-dev.herokuapp.com, we need to push the commits into master-dev
 
-	git checkout master-dev
-	git merge develop
-	git merge heroku-dev/master
-	git push heroku-dev master-dev:master
+	git checkout master-dev <br />
+	git merge develop <br />
+	git merge heroku-dev/master <br />
+	git push heroku-dev master-dev:master <br />
 
 - After testing all works run well in swapidy-dev.herokuapp.com, we will merge codes into live site (swapidy.com):
 
-	git checkout master
-	git merge heroku/master
-	git merge develop
-	git push heroku master
+	git checkout master <br />
+	git merge heroku/master <br />
+	git merge develop <br />
+	git push heroku master <br />
 
-- For overall, codes will go from: develop -> master-dev -> master
-	develop for everything we work
-	master-dev for testing
+- For overall, codes will go from:
+
+	develop -> master-dev -> master <br />
+	develop for everything we work <br />
+	master-dev for testing <br />
 	master for livesite
