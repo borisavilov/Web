@@ -24,7 +24,6 @@ I create another branch: master-dev
 I explain about the git branches in GitHUb
 
 There are 3 branches:
-
 	1. develop
 	2. master-dev
 	3. master
@@ -54,6 +53,7 @@ There are 3 branches:
 	git push heroku master <br />
 
 - For overall, codes will go from:
+
 	develop -> master-dev -> master <br />
 	develop for everything we work <br />
 	master-dev for testing <br />
