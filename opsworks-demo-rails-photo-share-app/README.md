@@ -1,4 +1,4 @@
-# AWS OpsWorks Rails Demo App - Photo Share
+# AWS OpsWorks Rails Demo - Photo Share App
 
 1. Sign up for AWS and Log in to OpsWorks
 2. Create a Stack
