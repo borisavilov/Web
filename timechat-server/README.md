@@ -147,7 +147,6 @@
       friend_id           String *required
 
 
-
 === Notification Endpoints
 ==== Delete notification
     POST: /api/v1/notifications/delete
@@ -159,7 +158,6 @@
     parameters:  
       token               String *required
       notification_id     String *required
-
 
 === Medias Endpoints
 ==== Get all media
