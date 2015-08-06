@@ -1,0 +1,86 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// User Index page style
+.admin_users_index{	
+	.first-row{
+		.form-search{
+			margin-top: 15px;
+			.icon-search{
+				position: absolute; 
+				margin-top: 8px; 
+				margin-left: 7px;
+				cursor: pointer;
+			}
+			.icon-remove-sign{
+				position: absolute; 				
+				margin-left: -21px; 
+				margin-top: 8px;
+			}
+
+			.search-query{
+				padding-left: 22px;
+				padding-right: 22px;
+				width: 86%;
+			}
+		}
+	}
+}
+
+.navbar-fixed-top{
+	.container{
+		.brand{
+			margin: 0px;
+			padding: 0px;
+		}
+		.pull-right > li > a {
+			float: right;
+			font-size: 12px;
+			padding: 3px;			
+		}
+		.pull-right{
+			.form-search{
+				#search{
+					font-size: 12px;
+    			margin-top: 0;
+    			padding-left: 25px;
+				}				
+			}
+		}
+	}
+}
+
+
+.signin_page{
+	margin: 10% auto auto;  
+  width: 260px;
+  .page-border{
+  	border: 1px solid #DDDDDD;
+  	border-radius: 10px;
+  	padding: 20px;
+  }
+  .title{
+  	text-align: center;
+  	margin: 5px 5px;
+  }
+  .sigin-page-form{
+  	margin-bottom: 0px;
+  }
+}
+
+.signup_page{
+	border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  margin: 10% auto auto;
+  padding: 20px;
+  width: 450px;
+}
+
+.forgot-password-page{
+	border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  margin: 10% auto auto;
+  padding: 20px;
+  width: 450px;	
+}
