@@ -1,0 +1,54 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.new-user-page{
+	.container{
+		form{
+			.control-group{
+				margin-bottom: 10px;
+				.control-label{
+					text-align: left;
+				}
+				.controls{
+					.parsley-error-list{
+						li{
+							list-style: none;
+							background-color: #fff;
+					    border: 1px solid #dd;
+					    border-radius: 4px;
+					    margin-top: 5px;
+					    padding: 3px 0 3px 10px;
+					    width: 200px;
+					    border: solid 1px;
+					    position: absolute;
+					    margin-top: -30px;
+					    margin-left: 220px;
+						}
+					}
+				}
+			}
+      span.note {
+        display: inline-block;
+        font-size: 12px;
+        padding-top: 6px;
+        color: rgb(247, 151, 39);
+      }
+		}
+		.page-header{
+			margin: 0px;
+			border-bottom: none;
+			.register-title{
+				width: 432px;
+				height: 66px;
+				background: url("stripe.png") repeat scroll -6px -298px transparent;
+				margin-top: 50px;
+				margin-bottom: 40px;
+			}
+		}
+	}
+	.form-actions{
+  	border-top:none;
+  	background-color: none;
+	}
+
+}

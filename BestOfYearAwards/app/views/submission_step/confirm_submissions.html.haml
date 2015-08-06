@@ -1,0 +1,51 @@
+- @current_section = :submission
+
+.row.confirm-submission-info-page
+	.container
+		.span9.content
+			.row.first-row
+				%a{:href=>"#", :style=>""} 
+					- if session[:submission_type]=='product'
+						.submission-product-page-title
+					- else
+						.submission-project-page-title
+			.row.second-row			
+				- if session[:submission_type]=='product'
+					- current_user.product_submissions.each do |submission|
+						.row.submission-box
+							%h3= submission.title
+							.span4
+								%h4 Manufacturer Information:
+								%p= submission.product_spec.manufacture_name
+								%p= submission.product_spec.manufacture_addr							
+								%h4 Manufacturer Contact:
+								%p= submission.product_spec.contact.name
+								%p= submission.product_spec.contact.title_position
+								%p= submission.product_spec.contact.email
+								%p= submission.product_spec.contact.phone
+							.span5
+								%h4 Product Information:
+								%p= submission.product_spec.name
+								%p= submission.product_spec.introduction_date
+								.product-description= markdown submission.product_spec.description
+				- elsif session[:submission_type]=='project'
+					- current_user.project_submissions.each do |submission|
+						.row.submission-box
+							%h3= submission.title
+							.span4
+								%h4 Firm Information:
+								%p= submission.project_spec.firm_name
+								%p= submission.project_spec.firm_address
+								%h4 Firm Contact:
+								%p= submission.project_spec.contact.name
+								%p= submission.project_spec.contact.title_position
+								%p= submission.project_spec.contact.email
+								%p= submission.project_spec.contact.phone
+							.span5
+								%h4 Project Information:
+								%p= submission.project_spec.name
+								%p= submission.project_spec.completion_date
+								.product-description= markdown submission.project_spec.description
+			.row.last-row{:style=>"margin-bottom: 30px;margin-right: 50px;margin-top: 10px;text-align: right;"}
+				= link_to "Go Back", previous_wizard_path, :class=>"c_btn yc_btn"
+				= link_to "Submit and Pay", payment_process_path, :class=>"c_btn yc_btn"			

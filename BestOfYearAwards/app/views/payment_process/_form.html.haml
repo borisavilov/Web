@@ -1,0 +1,23 @@
+= form_for @order, url: wizard_path, :html=>{:class=>"form-horizontal order-processing", :"data-validate" => "parsley"} do |f|
+	- if @order.errors.any?
+		.error_messages
+			%h2
+				= pluralize(@order.errors.count, "error")
+				prohibited this user from being saved:
+			%ul
+				- @order.errors.full_messages.each do |msg|
+					%li= msg
+	= yield f
+	.row.actions{:style=>"text-align: right; padding-right: 50px;"}
+		
+		= f.submit "Continue", :class=>"c_btn yc_btn"
+		
+
+:javascript
+	$("input.accept-agree").click(function(){
+		if($(this).is(':checked')){
+			$(".btn-continue").removeAttr("disabled");
+		}else{
+			$(".btn-continue").attr("disabled","disabled");
+		}
+	});		

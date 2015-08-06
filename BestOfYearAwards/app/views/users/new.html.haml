@@ -1,0 +1,7 @@
+.row.new-user-page
+	.container
+		- model_class = User
+		.page-header
+			%a{:href=>"#", :style=>""} 
+				.register-title
+		= render :partial => "form"

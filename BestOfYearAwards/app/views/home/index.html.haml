@@ -1,0 +1,40 @@
+.container.home-page
+	.row.first-row
+		#slider
+			#layerslider-container
+				#layerslider{:style => "width: 960px; height: 480px; margin: 0 auto;"}
+					.ls-layer{:style => "slidedelay: 7000;"}
+						[IMG HERE 1]
+					.ls-layer{:style => "slidedirection: right; slidedelay: 4000; durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0;"}
+						[IMG HERE 2]
+
+	.row.home-content
+		%p
+			SUBMIT:
+			%span Product & Project Submission Deadline:
+			%strong Friday, September 6, 2013, 11:59pm EST
+		%p
+			VOTE: 
+			%span Product Voting: 
+			%strong September 16-27, 2013
+		%p
+			JOIN: 
+			%span Awards Ceremony: 
+			%strong Thurdsay, December 5, 2013
+
+:javascript
+	$(document).ready(function(){
+		$('#layerslider').layerSlider({
+			skinsPath : 'assets/skins/',
+			hoverPrevNext : false,
+			skin : 'borderlesslight',
+			cbInit				: function(element){jQuery('.c-api').append(jQuery('<span>function cbInit() called</span><br>'));},
+			cbStart				: function(data){jQuery('.c-api').append( jQuery('<span>function cbStart() called</span><br>'));},
+			cbStop				: function(data){jQuery('.c-api').append( jQuery('<span>function cbStop() called</span><br>'));},
+			cbPause				: function(data){jQuery('.c-api').append( jQuery('<span>function cbPause() called (pauseOnHover)</span><br>'));},
+			cbAnimStart			: function(data){jQuery('.c-api').append( jQuery('<span>function cbAnimStart() called, current layer is: '+data.curLayerIndex+', next layer is: '+data.nextLayerIndex+'</span><br>'));},
+			cbAnimStop			: function(data){jQuery('.c-api').append( jQuery('<span>function cbAnimStop() called</span><br>'));},
+			cbPrev				: function(data){jQuery('.c-api').append( jQuery('<span>function cbPrev() called</span><br>'));},
+			cbNext				: function(data){jQuery('.c-api').append( jQuery('<span>function cbNext() called</span><br>'));}
+		});
+	});					

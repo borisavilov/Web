@@ -1,0 +1,25 @@
+.row.signin-page
+	.container
+		%a{:href=>"#", :style=>""} 
+			.login-page-title
+		 
+		= form_for @user_session, :url => {:action => "create"}, :html=>{:class=>'form-horizontal'} do |f|
+			= f.error_messages
+			.row.input-form
+				.control-group
+					= f.label :email, "Email Address",:class => 'control-label'
+					.controls
+						= f.text_field :email, :class => 'text_field'
+				.control-group
+					= f.label :password, "Password",:class => 'control-label'
+					.controls
+						= f.password_field :password, :class => 'text_field'		
+				.control-group
+					%label.checkbox{:style=>'margin-left: 180px;'}
+						= f.check_box :remember_me
+						Remember me
+					%p{:style=>'margin-left: 180px; margin-top: 14px;'}
+						Don't have an account?
+						= link_to 'Register', :signup
+			.submit-control-box{:style => 'margin-top: -70px;'}
+				= f.submit "Login", :class=>"c_btn"

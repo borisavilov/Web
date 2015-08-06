@@ -1,0 +1,207 @@
+@import "bootstrap";
+body { padding-top: 0px; }
+@import "bootstrap-responsive";
+
+
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container{
+  width: 900px !important;
+
+}
+.row{
+  margin-left: 0px !important;
+}
+[class*="span"]{
+  margin-left:0px;
+}
+body{
+  a, p, span, label{
+    font-family: arial, helvetica, sans-serif; 
+  }
+  .control-group{
+    .controls{
+      input{
+        border-color: black;
+        border-radius: 0px;
+        box-shadow: none;
+      }
+    }
+  }
+  .container{
+    input.c_btn{
+      background-color: black;
+      border-image: none;
+      border: none;
+      border-radius: 40px;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 0;
+      text-align: center;
+      vertical-align: middle;
+      width:72px;
+      height: 72px;
+      padding-left: 2px;
+      padding-right: 2px;
+      &:hover{
+        color: rgb(247, 151, 39);
+        text-decoration: none;
+      }
+
+    }
+    input.lc_btn{
+      width: 94px;
+      height: 94px;
+      border-radius: 50px;
+      text-align: center;
+      vertical-align: middle;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+    input.yc_btn{
+      &:hover{
+        color: #ffff00;
+        text-decoration: none;
+      }    
+    }
+    input.wc_btn{
+      &:hover{
+        color: rgb(247, 151, 39);
+        text-decoration: none;
+      }    
+    }
+    
+    a.c_btn{
+      background-color: black;
+      border-image: none;
+      border: none;
+      border-radius: 40px;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 0;
+      text-align: center;
+      vertical-align: middle;
+      width:72px;
+      height: 47px;
+      padding-top: 28px;
+      padding-left: 2px;
+      padding-right: 2px;
+      &:hover{        
+        color: rgb(247, 151, 39);
+        text-decoration: none;
+      }
+      &:focus{
+        color: rgb(247, 151, 39);
+        text-decoration: none; 
+      }
+    }
+    a.yc_btn{
+      &:hover{
+        color: #ffff00;
+        text-decoration: none;
+      }    
+    }
+    a.wc_btn{
+      &:hover{
+        color: rgb(247, 151, 39);
+        text-decoration: none;
+      }    
+    }
+    a.lc_btn{
+      width: 90px;
+      height: 94px;
+      border-radius: 50px;
+      height: 68px;
+      padding-top: 26px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+    h1.page-title{
+      color: #ff8348;
+    }
+  }  
+}
+
+
+
+.nav-collapse{
+  ul.nav{
+    > li {
+      > a, > span {
+        text-transform: uppercase;
+      }
+    }
+    li.dropdown{
+      &:hover{
+        .dropdown-menu{
+          display: block;
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+}
+ 
+/*  wrapper divs */
+  .custom-checkbox, .custom-radio { position: relative; }
+    
+  /* input, label positioning */
+  .custom-checkbox input, 
+  .custom-radio input.price-type {
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    margin: 0;
+    z-index: 0;
+  }
+
+  .custom-checkbox label, 
+  .custom-radio label {
+    display: block;
+    position: relative;
+    z-index: 1;
+    font-size: 1.3em;
+    padding-right: 1em;
+    line-height: 1;
+    padding: .3em 0 .5em 30px;
+    margin: 0 0 .3em;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+    
+  /* states */
+  .custom-checkbox label { background: url(checkbox.gif) no-repeat; }
+
+  .custom-radio label { background: url(radiobutton.gif) no-repeat; }
+
+  .custom-checkbox label, .custom-radio label {
+    background-position: -10px -14px;
+    
+  }
+
+  .custom-checkbox label.hover,
+  .custom-checkbox label.focus,
+  .custom-radio label.hover,
+  .custom-radio label.focus {
+    background-position: -10px -114px;
+/*    color: #4787ed;*/
+  }
+
+  .custom-checkbox label.checked, 
+  .custom-radio label.checked {
+    background-position: -10px -214px;
+  }
+
+  .custom-checkbox label.checkedHover, 
+  .custom-checkbox label.checkedFocus {
+    background-position: -10px -314px;
+  }
+
+  .custom-checkbox label.focus, 
+  .custom-radio label.focus {
+    outline: 1px dotted #ccc;
+  }
+

@@ -1,0 +1,116 @@
+.faq-page{
+	.first-row{
+		margin-top: 50px;
+		margin-bottom: 50px;
+		h1{
+			color: #ff007f;
+			font-size: 60px;
+		}
+		.faq-title{
+			width: 70px;
+			height: 36px;
+			background: url("stripe.png") repeat scroll -322px -110px transparent;
+		}
+	}
+	.second-row{
+		ul{
+			margin-left: 0px;
+			li{
+				list-style: none;
+				a{
+					color: #ff007f;
+					font-size: 16px;
+					font-weight: bolder;
+					&:hover{
+						color: black;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	.third-row{
+		h5{
+			color: #ff007f;
+			font-size: 16px;
+			font-weight: bolder;			
+		}
+		ul{
+			margin-left: 0px;
+			li{
+				float: left;
+				list-style: none;
+				a{
+					color: #ff007f;
+					font-size: 16px;
+					&:hover{
+						color: black;
+						text-decoration: none;
+					}
+					&:focus{
+						color: black;
+						text-decoration: none;
+					}
+				}
+			}
+			li:after{
+				content: "|";
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+			li.last:after{
+				content: "";
+				margin-left: 0px;
+				margin-right: 0px;	
+			}
+		}
+	}
+	.fourth-row{
+		.sub-title{
+			color: #ff007f;
+			font-size: 16px;	
+			margin-top: 40px;		
+		}
+		h5{
+			color: #ff007f;
+			font-size: 16px;
+			font-weight: bolder;			
+		}
+		ul{
+			margin-left: 15px;			
+		}
+    ul.catlist {
+      margin-left: 0;
+      list-style: none;
+    }
+		ul.menulist{
+			margin-left: 0px;
+      list-style: none;
+			li{
+				float: left;
+				a{
+					color: #ff007f;
+					font-size: 16px;
+					&:hover{
+						color: black;
+						text-decoration: none;
+					}
+					&:focus{
+						color: black;
+						text-decoration: none;
+					}
+				}
+			}
+			li:after{
+				content: "|";
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+			li.last:after{
+				content: "";
+				margin-left: 0px;
+				margin-right: 0px;	
+			}
+		}
+	}
+}

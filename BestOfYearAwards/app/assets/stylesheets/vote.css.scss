@@ -1,0 +1,26 @@
+.vote-page{
+	.content-page{
+		background-color: #ff8348;
+		color: white;
+		width: 800px;
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-bottom: 40px;
+		.first-row{
+			margin-top: 50px;
+			h1{
+				font-size: 40px;
+				font-weight: normal;
+			}
+			.vote-page-title{
+				width: 290px;
+				height: 66px;
+				background: url("stripe.png") repeat scroll -3px -84px transparent;
+			}
+		}
+		.second-row{
+			margin-bottom: 40px;
+		}
+
+	}
+}
