@@ -1,0 +1,88 @@
+.row.account-info
+  %p.page-title MY ACCOUNT
+  .row.account-box
+    .row
+      %p.container-title ACCOUNT INFO
+    .span13.control-box
+      .span4
+        .control-group
+          .controls
+            %input#first-name{:placeholder => "Jogn", :type => "text"}/
+        .control-group
+          .controls
+            %input#password{:placeholder => "********", :type => "password"}/
+      .span4
+        .control-group
+          .controls
+            %input#last-name{:placeholder => "Doe", :type => "text"}
+        .control-group
+          .controls
+            %input#password-confirm{:placeholder => "********", :type => "password"}
+      .span4
+        .control-group
+          .controls
+            %input#email-address{ :placeholder => "jdoe@email.com", :type => "email" }
+  .row.account-box
+    .row
+      %p.container-title BILLING ADDRESS
+    .span13.control-box.billing-control-box
+      .span8
+        .control-group
+          .controls
+            %input#street-name{:placeholder => "123 Street", :type => "text"}/
+        .control-group
+          .controls
+            %input#apt-field{:placeholder => "Apt 00", :type => "text"}/
+      .span4
+        .control-group
+          .row
+            .span2
+              %input#first-name{:placeholder => "City", :type => "text"}/
+            .span1
+              %select.filter_select.span2{:style=>""}
+                %option
+                  ST
+                %option
+                  TS
+        .control-group
+          .controls
+            %input#number-field{:placeholder => "12345", :type => "text"}
+  .row.account-box
+    .row
+      %p.container-title CREDIT CARD INFO
+    .span13.control-box.credit-card-info-box
+      .span8
+        .control-group
+          .controls
+            %input#full-name{:placeholder => "John Doe", :type => "text"}/
+        .control-group
+          .controls
+            %input#phone-number{:placeholder => "**** **** **** 3182", :type => "text"}/
+      .span4
+        .control-group
+          .row
+            .span2
+              %label EXP. DATE
+            .span1
+              %select.filter_select.span2{:style=>""}
+                %option
+                  00
+                %option
+                  10
+            .span1{:style=>"width:10px;"}
+              %label{:style => "width:10px"} /
+            .span1
+              %select.filter_select.span2{:style=>""}
+                %option
+                  00
+                %option
+                  10
+        .control-group
+          .controls
+            %input#cvv-field{:placeholder => "cvv", :type => "text"}
+  .row.account-info-box-controls
+    .span3.offset5
+      %button.btn{:type => "button"} CANCEL
+    .span3
+      %button.btn.btn-success{:type => "button"} SAVE
+

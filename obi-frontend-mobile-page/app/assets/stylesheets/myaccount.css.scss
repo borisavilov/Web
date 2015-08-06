@@ -1,0 +1,135 @@
+// Place all the styles related to the mypasses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//header style
+@font-face {
+  font-family: custom_font;
+  src: url('fonts/ITCFranklinGothicStd-BkXCp.otf');
+}
+@font-face {
+  font-family: tab-button-font;
+  src: url('fonts/ITCFranklinGothicStd-BkCp.otf');
+}
+
+body{
+  background-color: #eaeaea !important;
+}
+.row{
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+div.page-wrapper{
+  .account-info{
+    .page-title{
+      margin-top: 50px;
+      margin-left: 40px;
+      margin-bottom: 35px;
+      font-family: custom_font;
+      font-size: 50px;
+      font-weight: bolder;
+      color: #034bd1;
+    }
+    .account-box{
+      select{
+        padding-top: 10px;
+      }
+      .span13{
+        margin-left: 30px;
+      }
+      p.container-title{
+        color: #034bd1;
+        font-family: custom_font;
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        margin-top: 20px;
+      }
+      .control-box{
+        border: solid 1px #eaeaea;
+        border-radius: 5px;
+        padding-top: 20px;
+        padding-right: 15px;
+        input{
+          width: 95%;
+          height: 30px;
+          border-radius: 2px;
+        }
+      }
+      .billing-control-box{
+        .span8 input{
+          width: 98%;
+        }
+        .span2{
+          margin-left: 0px;
+          width: 180px;
+        }
+        .span1 select{
+          width: 100px;
+          border-radius: 2px;
+          height: 40px;
+        }
+      }
+      .credit-card-info-box{
+        .span8 input{
+          width: 98%;
+        }
+        .span2{
+          margin-left: 0px;
+          width: 100px;
+          label{
+            padding-top: 8px;
+          }
+        }
+        .span1{
+          width: 85px;
+          margin-left: 5px;
+          label{
+            padding-top: 8px;
+          }
+          select{
+            width: 80px;
+            border-radius: 2px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .account-info-box-controls{
+      button{
+        width: 132px;
+      }
+    }
+  }
+}
+
+.account-info-box-controls{
+  margin: 30px 0px 30px 0px;
+  button.btn-success{
+    background-color: #b5e900;
+    background-image: -moz-linear-gradient(top, #b5e900, #b5e900);
+    background-image: -ms-linear-gradient(top, #b5e900, #b5e900);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b5e900), to(#b5e900));
+    background-image: -webkit-linear-gradient(top, #b5e900, #b5e900);
+    background-image: -o-linear-gradient(top, #b5e900, #b5e900);
+    background-image: linear-gradient(top, #b5e900, #b5e900);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
+    border-color: #b5e900 #b5e900 #b5e900;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  }
+  button.btn-success:hover{
+    background: #b5e900; /* Old browsers */
+    background: -moz-linear-gradient(top,  #b5e900 0%, #71e902 46%, #b5e900 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5e900), color-stop(46%,#71e902), color-stop(100%,#b5e900)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #b5e900 0%,#71e902 46%,#b5e900 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #b5e900 0%,#71e902 46%,#b5e900 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #b5e900 0%,#71e902 46%,#b5e900 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #b5e900 0%,#71e902 46%,#b5e900 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5e900', endColorstr='#b5e900',GradientType=0 ); /* IE6-9 */
+
+  }
+}

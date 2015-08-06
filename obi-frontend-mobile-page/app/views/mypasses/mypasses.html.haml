@@ -1,0 +1,106 @@
+.container
+  .row.passes-page
+    .row
+      %br/
+      %br/
+      %p.page_title MY PASSES
+      %br/
+      %br/
+    .row.tab-content
+      %ul
+        %li
+          %a.btn.selected{:href=>'#tab1'} CURRENT
+        %li
+          %a.btn{:href=>'#tab2'} EXPIRED
+      .controls.controls-row
+        .filter_by
+          %label.span1{:style=>"font-size:10px;padding:0px 2px 0px 2px;"} FILTER BY
+          %select.filter_select.span2{:style=>""}
+            %option
+              IN USE
+            %option
+              Status
+      #tab1
+        %table{:cellspacing=>'0'}
+          %tr
+            %th
+              .label STATUS
+            %th
+              .label TYPE OF PASS
+            %th
+              .label GYM NAME/LOCATION
+            %th
+              .label DATE PURCHASED
+            %th
+              .label DATE ACTIVATED
+            %th
+              .label DATE EXPIRED
+            %th
+              .label REDEEM CODE
+          %tr
+            %td In Use
+            %td 4-day
+            %td David Barton NY, NY
+            %td 1/29/13
+            %td 1/31/13
+            %td 3/4/13
+            %td UNX82L
+          %tr
+            %td Not Activated
+            %td 1-day
+            %td Crunch LA, CA
+            %td 1/29/13
+            %td ...
+            %td 3/1/13
+            %td ZJ1T78
+          %tr
+            %td Not Activated
+            %td 1-day
+            %td 24 Hr Fitness SF, CA
+            %td 1/29/13
+            %td ...
+            %td 3/1/13
+            %td 92KBW8
+
+      #tab2
+        %table{:cellspacing=>'0'}
+          %tr
+            %th
+              .label STATUS
+            %th
+              .label TYPE OF PASS
+            %th
+              .label GYM NAME/LOCATION
+            %th
+              .label DATE PURCHASED
+            %th
+              .label DATE ACTIVATED
+            %th
+              .label DATE EXPIRED
+            %th
+              .label REDEEM CODE
+          %tr
+            %td In Use
+            %td 4-day
+            %td David Barton NY, NY
+            %td 1/29/13
+            %td 1/31/13
+            %td 3/4/13
+            %td UNX82L
+          %tr
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+          %tr
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+

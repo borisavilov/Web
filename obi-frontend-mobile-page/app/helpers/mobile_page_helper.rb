@@ -1,0 +1,2 @@
+module MobilePageHelper
+end

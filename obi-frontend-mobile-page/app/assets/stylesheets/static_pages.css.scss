@@ -1,0 +1,829 @@
+// Place all the styles related to the mypasses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//header style
+@font-face {
+  font-family: check-out-font;
+  src: url('fonts/ITCFranklinGothicStd-BkCp.otf');
+}
+@font-face {
+  font-family: default-font;
+  src: url('fonts/ITCFranklinGothicStd-MdCd.otf');
+}
+
+body{
+  background-color: #eaeaea !important;
+}
+a, p, span, label{
+  font-family: default-font;
+}
+a{
+  color: #034bd1;
+}
+a:hover{
+  background-color: transparent;
+}
+.row{
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+div.page-wrapper{
+  .timeline{
+    margin-top: 15px;
+    .icon{
+      float: left;
+      width: 36px;
+      height: 40px;
+      background: image_url('timeline_icons.png') 0px 0px no-repeat;
+    }
+    .second{
+      background-position: -56px 0px;
+    }
+    .third{
+      background-position: -114px 0px;
+    }
+    .icon.active{
+      background-position: 0px -37px;
+    }
+    .icon.second.active{
+      background-position: -56px -37px
+    }
+    .icon.third.active{
+      background-position: -114px -37px
+    }
+    .border{
+      width: 130px;
+      height: 3px;
+      background: #d7d7d7;
+      float: left;
+      margin-top: 20px;
+    }
+    .border.active{
+      background: #b5e900
+    }
+  }
+  .account-info{
+    .page-title{
+      margin-top: 40px;
+      margin-left: 40px;
+      margin-bottom: 10px;
+      font-family: check-out-font;
+      font-size: 50px;
+      font-weight: bolder;
+      color: #034bd1;
+    }
+    .label-comment{
+      font-family: verdana;
+      margin-left: 52px;
+    }
+    .checkout-box{
+      margin-top: 10px;
+      .checkout-info-box{
+        border: solid 1px #eaeaea;
+        border-radius: 5px;
+        padding-top: 20px;
+        padding-right: 15px;
+        margin-left: 30px;
+        .span3{
+          p{
+            padding-left: 15px;
+            font-family: check-out-font;
+            font-size: 16px;
+            color: #034CD2;
+            text-align: left;
+          }
+        }
+        .first-item{
+          a{
+            color: #034CD2;
+            margin-left: 15px;
+          }
+          a:hover{
+            color: #034CD2;
+            margin-left: 15px;
+            background: transparent;
+          }
+        }
+        .second-item{
+
+        }
+        .third-item{
+          p{
+            margin-left: 0px;
+            margin-right: 80px;
+            text-align: center;
+          }
+        }
+        .fourth-item{
+          p{
+            margin-left: 0px;
+            margin-right: 80px;
+            text-align: center;
+          }
+        }
+
+      }
+      p{
+        text-align: center;
+        font-family: check-out-font;
+        font-size: 20px;
+      }
+    }
+    .account-box{
+      select{
+        padding-top: 10px;
+      }
+      .span13{
+        margin-left: 30px;
+      }
+      p.container-title{
+        color: #034bd1;
+        font-family: check-out-font;
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        margin-top: 20px;
+      }
+      .control-box{
+        border: solid 1px #eaeaea;
+        border-radius: 5px;
+        padding-top: 20px;
+        padding-right: 15px;
+        input{
+          width: 95%;
+          height: 30px;
+          border-radius: 2px;
+        }
+        .custom-select{
+          width: 80px;
+          float: left;
+          height: 38px;
+          border: 2px solid #e7e7e7;
+          position: relative;
+          margin-bottom: 8px;
+          .select-arrow{
+            width: 36px;
+            height: 34px;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 3px;
+            background: image_url('select-arrow.png') center center no-repeat;
+          }
+          select{
+            width: 80px;
+            padding: 10px;
+            color: #959595;
+            font-size: 16px;
+            background: transparent;
+            border: none;
+          }
+        }
+      }
+      .billing-control-box{
+        .span8 input{
+          width: 98%;
+        }
+        .span2{
+          margin-left: 0px;
+          width: 180px;
+        }
+        .span1 .custom-select{
+          width: 95px;
+          select{
+            width: 95px;
+          }
+        }
+      }
+      .credit-card-info-box{
+        .checkbox{
+          margin-top: -20px;
+          input{
+            width: 15px;
+            margin-top: -3px;
+          }
+        }
+        .span2{
+          margin-left: 0px;
+          width: 100px;
+          label{
+            padding-top: 8px;
+          }
+        }
+        .span1{
+          width: 85px;
+          margin-left: 5px;
+          label{
+            padding-top: 8px;
+          }
+        }
+      }
+    }
+    .checkout-box-control{
+      span4{
+        button.btn-success{
+          width: 200px !important;
+
+        }
+      }
+    }
+  }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> GO WORKOUT PAGE STYLE
+  .go-work-out-info{
+    .page-title{
+      margin-top: 40px;
+      margin-left: 40px;
+      margin-bottom: 10px;
+      font-family: check-out-font;
+      font-size: 50px;
+      font-weight: bolder;
+      color: #034bd1;
+    }
+    .label-comment{
+      font-family: verdana;
+      margin-left: 40px;
+    }
+    .go-work-out-info-box{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      p.container-title{
+        color: #034bd1;
+        font-family: check-out-font;
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        margin-top: 20px;
+      }
+      .span13{
+        margin-left: 20px;
+      }
+      .span4{
+        border: 1px solid #EAEAEA;
+        border-radius: 3px;
+        padding: 25px 0;
+        height: 100px;
+        .img-box{
+          width: 100px;
+        }
+        .desc-box{
+          p{
+            color: #034bd1;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FIND A GYM page style                          112
+  .find-gym-page{
+    margin-bottom: 20px;
+    .page-title{
+      margin-top: 30px;
+      margin-left: 40px;
+      margin-bottom: 15px;
+      font-family: check-out-font;
+      font-size: 50px;
+      font-weight: bolder;
+      color: #034bd1;
+    }
+    .label-comment{
+      font-family: verdana;
+      margin-left: 40px;
+    }
+    .find-gym-box{
+      .find-result-box{
+        height: 460px;
+        overflow: auto;
+/*        border: solid 1px #eaeaea;
+        border-radius: 3px;*/
+        .find-item{
+          border: solid 1px #eaeaea;
+          border-radius: 3px;
+          margin-bottom: 10px;
+
+          p{
+            margin-top: 10px;
+            margin-bottom: 0px;
+            font-family: check-out-font;
+            font-size: 25px;
+            color: #034bd1;
+          }
+          .label-distance{
+            color: #034bd1;
+          }
+          .icon-arrow-left{
+            background: image_url('arrow-right.png') 0px 0px no-repeat;
+            width: 36px;
+            height: 38px;
+          }
+          .arrow-right{
+            width: 10px;
+            margin-left: 0px;
+          }
+        }
+      }
+      .span8{
+        padding-left: 20px;
+      }
+      input{
+        width: 360px;
+      }
+      button{
+        height: 30px;
+        padding-top: 0px;
+      }
+    }
+
+  }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> GYM ACCOUNT PAGE STYLE
+.gym-account-info{
+  .page-title{
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    font-family: check-out-font;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #034bd1;
+  }
+  .label-comment{
+    font-family: verdana;
+    margin-left: 52px;
+  }
+  .checkout-box{
+    margin-top: 10px;
+    .checkout-info-box{
+      border: solid 1px #eaeaea;
+      border-radius: 5px;
+      padding-top: 20px;
+      padding-right: 15px;
+      margin-left: 30px;
+    }
+    p{
+      text-align: center;
+      font-family: check-out-font;
+      font-size: 20px;
+    }
+  }
+  .account-box{
+    label.pricing-label{
+      margin-top: 35px;
+    }
+    .amenities-controlbox{
+      .span3{
+        width: 172px;
+        margin-left: 20px !important;
+        input[type="text"]{
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+    .span13{
+      margin-left: 30px;
+    }
+    p.container-title{
+      color: #034bd1;
+      font-family: check-out-font;
+      font-size: 30px;
+      font-weight: bolder;
+      margin-bottom: 15px;
+      margin-left: 30px;
+      margin-top: 35px;
+    }
+    .control-box{
+      border: solid 1px #eaeaea;
+      border-radius: 5px;
+      padding-top: 20px;
+      padding-right: 15px;
+      .span4 input[type="text"]{
+        width: 285px;
+        height: 30px;
+        border-radius: 2px;
+      }
+      .span4 input[type="email"]{
+        width: 285px;
+        height: 30px;
+        border-radius: 2px;
+      }
+      .span8 input[type="text"] {
+          width: 604px;
+          height: 30px;
+      }
+      .span6 input[type="text"] {
+        width: 435px;
+        height: 30px;
+      }
+
+      .custom-select{
+        width: 80px;
+        float: left;
+        height: 38px;
+        border: 2px solid #e7e7e7;
+        position: relative;
+        margin-bottom: 8px;
+        .select-arrow{
+          width: 36px;
+          height: 34px;
+          pointer-events: none;
+          position: absolute;
+          right: 0;
+          top: 3px;
+          background: image_url('select-arrow.png') center center no-repeat;
+        }
+        select{
+          width: 80px;
+          padding: 10px;
+          color: #959595;
+          font-size: 16px;
+          background: transparent;
+          border: none;
+          height: 40px;
+        }
+      }
+      .span3{
+        margin-left: 0px;
+        input[type="text"]{
+          width: 185px;
+        }
+      }
+      .span1{
+        margin-left: 0px;
+      }
+
+    }
+    .image-upload-box{
+      padding-bottom: 10px;
+      padding-top: 10px;
+      .input-append{
+        input[type="text"]{
+          height: 20px;
+          margin-right: 0px;
+          width: 210px;
+        }
+        button{
+          height: 30px;
+          width: 80px;
+          padding-top: 0;
+	  padding-left:20px;
+        }
+      }
+    }
+    .pricing-box{
+      padding-bottom: 20px;
+      .pricing-col{
+        border: solid 1px #eaeaea;
+        padding: 40px 0;
+      }
+      .span1{
+        input[type="text"]{
+          width: 60px;
+          margin-top: 20px;
+          height: 30px;
+          border-radius: 2px;
+        }
+      }
+    }
+    .banking-info-box{
+      .span2{
+        margin-left: 0px;
+        label{
+          margin-top: 10px;
+        }
+      }
+      .custom-select{
+        width: 145px;
+        select{
+          width: 145px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .gym-checkout-box-control{
+    button.btn{
+      width: 145px;
+    }
+  }
+
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  RETURN  USER PAGE STYLE
+.return-user-box{
+  a{
+    color: #034bd1;
+  }
+  a:hover{
+    background-color: transparent;
+  }
+  .span13{
+    margin-left: 30px;
+  }
+  .use-another-card{
+    margin-bottom: 20px;
+  }
+  .link-control{
+    margin-top: 20px;
+    a{
+      color: black;
+    }
+  }
+  p.container-title{
+    color: #034bd1;
+    font-family: check-out-font;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  .control-box{
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-right: 15px;
+    input{
+      width: 95%;
+      height: 30px;
+      border-radius: 2px;
+    }
+    .custom-select{
+      width: 80px;
+      float: left;
+      height: 38px;
+      border: 2px solid #e7e7e7;
+      position: relative;
+      margin-bottom: 8px;
+      .select-arrow{
+        width: 36px;
+        height: 34px;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 3px;
+        background: image_url('select-arrow.png') center center no-repeat;
+      }
+      select{
+        width: 80px;
+        padding: 10px;
+        color: #959595;
+        font-size: 16px;
+        background: transparent;
+        border: none;
+      }
+    }
+  }
+}
+
+
+@font-face {
+  font-family: homepage-font;
+  src: url('fonts/ITCFranklinGothicStd-DmCd.otf');
+}
+// >>>>>>>>>>>>>>>>>>>>>>> HOME PAGE STYLE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+.home-page{
+  .banner{
+    width: 1024px;
+    height: 526px;
+    background: image_url('banner.jpg') no-repeat;
+    position: relative;
+    border-bottom: 12px solid #034cd2;
+    .inner-main{
+      margin-top: 35px;
+      form{
+        .row{
+          margin-bottom: 4px;
+          input[type="text"], input[type="password"]{
+            width: 115px;
+            height: 20px;
+            line-height: 28px;
+            margin-left: 5px;
+            color: #333333;
+            padding: 0 5px;
+            border-top: 2px solid #b5e900;
+            border-bottom: 2px solid #b5e900;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-radius: 2px;
+            float: left;
+          }
+          input[type="submit"]{
+            background: #b5e900;
+            border: none;
+            cursor: pointer;
+            color: #474747;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 2px 20px;
+            text-transform: uppercase;
+            float: left;
+            border-radius: 2px;
+            &:hover{
+              color: #979797;
+            }
+          }
+        }
+      }
+      .control-group{
+        margin-bottom: 5px;
+      }
+    }
+    .logo-box{
+      margin-top: -30px;
+      .logo{
+        width: 393px;
+        height: 132px;
+        margin: 0 auto;
+        h1{
+          margin: 0;
+          a{
+            width: 393px;
+            height: 132px;
+            display: block;
+            background: image_url('logo-large.png') no-repeat;
+            text-indent: -99999px;
+          }
+        }
+        h3{
+          font-family: verdana;
+          margin: 0;
+          color: #b5e900;
+          font-size: 20px;
+        }
+      }
+    }
+    .nav-bar{
+      display: inline-block;
+      margin-left: 220px;
+      color: white;
+      float: right;
+      ul{
+        margin-right: 20px;
+        margin-top: 5px;
+        li{
+          list-style: none;
+          display: inline-block;
+          float: left;
+          margin-left: 10px;
+          a{
+            text-decoration: none;
+            color: white;
+            font-family: custom_font;
+            font-size: 16px;
+            padding: 3px 5px;
+          }
+          a:hover{
+            border: 1px solid;
+            color: #b5e900;
+          }
+          a.current-menu{
+            color: #b5e900;
+          }
+        }
+      }
+
+    }
+    .sign-controll-box{
+      margin-top: 80px;
+      form{
+        input[type="email"]{
+          width: 100%;
+          height: 25px;
+          line-height: 28px;
+          margin-left: 5px;
+          color: #333333;
+          padding: 0 5px;
+          border-top: 2px solid #b5e900;
+          border-bottom: 2px solid #b5e900;
+          border-left-width: 0px;
+          border-right-width: 0px;
+          border-radius: 2px;
+          float: left;
+        }
+        input[type="submit"]{
+          background: #b5e900;
+          border: none;
+          cursor: pointer;
+          color: #474747;
+          font-size: 14px;
+          font-weight: bold;
+          padding: 2px 20px;
+          text-transform: uppercase;
+          float: left;
+          height: 29px;
+          border-radius: 0 2px 2px 0;
+          &:hover{
+            color: #979797;
+          }
+        }
+      }
+    }
+  }
+  .homepage-controls{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .col{
+      margin-left: 90px;
+      width: 150px;
+    }
+    a{
+      text-align: center;
+      img{
+        margin-left: 30px;
+      }
+    }
+  }
+  label{
+    color: white;
+  }
+  a{
+    font-family: homepage-font !important;
+    color: #034bd1;
+    text-transform: uppercase
+  }
+  a:hover{
+    color: #034bd1;
+    background: transparent;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> btn
+button.btn-success{
+  background-color: #b5e900;
+  background-image: -moz-linear-gradient(top, #b5e900, #b5e900);
+  background-image: -ms-linear-gradient(top, #b5e900, #b5e900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b5e900), to(#b5e900));
+  background-image: -webkit-linear-gradient(top, #b5e900, #b5e900);
+  background-image: -o-linear-gradient(top, #b5e900, #b5e900);
+  background-image: linear-gradient(top, #b5e900, #b5e900);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
+  border-color: #b5e900 #b5e900 #b5e900;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  font-family:check-out-font;
+  font-size: 20px;
+}
+button.btn-success:hover{
+  background: #b5e900; /* Old browsers */
+  background: -moz-linear-gradient(top,  #b5e900 0%, #71e902 46%, #b5e900 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5e900), color-stop(46%,#71e902), color-stop(100%,#b5e900)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #b5e900 0%,#71e902 46%,#b5e900 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #b5e900 0%,#71e902 46%,#b5e900 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #b5e900 0%,#71e902 46%,#b5e900 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #b5e900 0%,#71e902 46%,#b5e900 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5e900', endColorstr='#b5e900',GradientType=0 ); /* IE6-9 */
+}
+
+.last-row{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+ul.test-page{
+  margin-top: 50px;
+  li{
+    list-style: none;
+    margin-top: 20px;
+    a{
+      color: #034bd1;
+      font-size: 30px;
+    }
+    a:hover{
+     background-color: transparent;
+    }
+  }
+}

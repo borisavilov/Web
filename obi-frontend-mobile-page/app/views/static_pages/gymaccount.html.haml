@@ -1,0 +1,216 @@
+.row.gym-account-info
+  %p.page-title GYM ACCOUNT
+  .row.account-box
+    .row
+      %p.container-title GYM AND LOCATION INFO
+    .span13.control-box
+      .row.first-row
+        .span4
+          .control-group
+            .controls
+              %input#first-name{:placeholder => "Jogn", :type => "text"}/
+        .span4
+          .control-group
+            .controls
+              %input#last-name{:placeholder => "Doe", :type => "text"}
+        .span4
+          .control-group
+            .controls
+              %input#email-address{ :placeholder => "jdoe@email.com", :type => "email" }
+      .row.second-row
+        .span8
+          .control-group
+            .controls
+              %input#street-name{:placeholder => "123 Street", :type => "text"}/
+        .span4
+          .control-group
+            .row
+              .span3
+                %input#first-name{:placeholder => "City", :type => "text"}/
+              .span1
+                .custom-select
+                  .select-arrow
+                  %select
+                    %option ST
+                    %option US
+      .row.third-row
+        .span8
+          .control-group
+            .controls
+              %input#street-name{:placeholder => "123 Street", :type => "text"}/
+        .span4
+          .control-group
+            .controls
+              %input#number-field{:placeholder => "12345", :type => "text"}
+      .row.fourth-row
+        .span4
+          .control-group
+            .controls
+              %input#first-name{:placeholder => "Jogn", :type => "text"}/
+        .span4
+          .control-group
+            .controls
+              %input#last-name{:placeholder => "Doe", :type => "text"}
+        .span4
+          .control-group
+            .controls
+              %input#email-address{ :placeholder => "jdoe@email.com", :type => "email" }
+    .row
+      .span3.offset9
+        %a{:href=>"#", :style=>"color: #034bd1;"} More than one locatin? Add another form
+    .row
+      .row
+        %p.container-title AMENITIES
+      .span13.control-box.amenities-controlbox
+        .row.check-box-control
+          .span3.first-col
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              towel service
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              lockers
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              group fitness
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              sauna/steam room
+          .span3.second-col
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              pilates
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              mat area
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              retail
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              personal trainer
+          .span3.third-col
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              ride studio
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              yoga
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              boxng ring
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              live DJs
+          .span3.fourth-col
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              dotfit
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              pool
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              tanning bed
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              shwers
+          .span3.fifth-col
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              free weights
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              parking
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              cafe
+            %label.checkbox
+              %input{:type => "checkbox"}/
+              juice bar
+    .row
+      .row
+        %p.container-title
+      .span13.control-box.image-upload-box
+        .span4.form-inline
+          .input-append
+            %input#appendedInputButton.span2{:type => "text"}/
+            %button.btn{:type => "button"} UPLOAD
+        .span4.form-inline
+          .input-append
+            %input#appendedInputButton.span2{:type => "text"}/
+            %button.btn{:type => "button"} UPLOAD
+        .span4.form-inline
+          .input-append
+            %input#appendedInputButton.span2{:type => "text"}/
+            %button.btn{:type => "button"} UPLOAD
+    .row
+      .row
+        .span2
+          %p.container-title PRICING
+        .span4
+          %label.pricing-label Blurb about pricing
+      .span13.pricing-box
+        .span4.pricing-col
+          .controls.controls-row
+            .span1.img-box{:style=>"width:100px;"}
+              =image_tag('one.png')
+            .span1{:style=>"width:50px;"}
+              %p{:style=>"font-size: 40px; margin-left: 20px; margin-top: 33px;"} $
+            .span1{:style=>"margin-left: 0px;"}
+              %input{:placeholder => "20", :type => "text"}
+        .span4.pricing-col
+          .controls.controls-row
+            .span1.img-box{:style=>"width:100px;"}
+              =image_tag('onemonth.png')
+            .span1{:style=>"width:50px;"}
+              %p{:style=>"font-size: 40px; margin-left: 20px; margin-top: 33px;"} $
+            .span1{:style=>"margin-left: 0px;"}
+              %input{:placeholder => "20", :type => "text"}
+        .span4.pricing-col
+          .controls.controls-row
+            .span1.img-box{:style=>"width:100px;"}
+              =image_tag('product.jpg')
+            .span1{:style=>"width:50px;"}
+              %p{:style=>"font-size: 40px; margin-left: 20px; margin-top: 33px;"} $
+            .span1{:style=>"margin-left: 0px;"}
+              %input{:placeholder => "20", :type => "text"}
+
+    .row.account-box
+      .row
+        %p.container-title BANKING INFO
+      .span13.control-box.banking-info-box
+        .row
+          .span8
+            .control-group
+              .controls
+                %input#full-name{:placeholder => "name on card", :type => "text"}/
+          .span4
+            .control-group
+              .row
+                .span2
+                  %label TYPE OF ACCOUNT
+                .span2
+                  .custom-select
+                    .select-arrow
+                    %select
+                      %option 00
+                      %option 01
+                      %option 02
+                      %option 03
+                      %option 04
+                      %option 05
+        .row
+          .span6
+            .control-group
+              .controls
+                %input#phone-number{:placeholder => "0000000", :type => "text"}/
+          .span6
+            .control-group
+              .controls
+                %input#cvv-field{:placeholder => "0000000", :type => "text"}
+  .row.last-row.gym-checkout-box-control
+    .span2.offset8
+      %button.btn{:type => "button"} CANCEL
+    .span2
+      %button.btn.btn-success{:type => "button"} SAVE

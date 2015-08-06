@@ -1,0 +1,154 @@
+.row.account-info
+  .row
+    .span5.timeline.offset4
+      .icon.first.active
+      .border.first.active
+      .icon.second.active
+      .border.second
+      .icon.third
+  %p.page-title
+    CHECKOUT
+  %small.label-comment you have selected:
+  .row.checkout-box
+    .row
+      .span3
+        %p PASS
+      .span3
+        %p LOCATION
+      .span3
+        %p PRICE
+      .span3
+        %p REMOVE
+    .span13.checkout-info-box
+      .span3.first-item
+        .control-group
+          .controls
+            =image_tag('product.jpg')
+        .control-group
+          .controls
+            %a{:href => "#"} Change Selection
+      .span3.second-item
+        .control-group
+          .controls
+            %p New Youk Health
+        .control-group
+          .controls
+            %p and Racquet
+        .control-group
+          .controls
+            %p 123 Street
+        .control-group
+          .controls
+            %p City, ST 00000
+        .control-group
+          .controls
+            %p (XXX)XXX-XXXX
+      .span3.third-item
+        .control-group
+          .controls
+            %p $15
+      .span3.fourth-item
+        .control-group
+          .controls
+            %p X
+  .row.account-box
+    .row
+      %p.container-title ACCOUNT INFO
+    .span13.control-box
+      .span4
+        .control-group
+          .controls
+            %input#first-name{:placeholder => "first name", :type => "text"}/
+        .control-group
+          .controls
+            %input#password{:placeholder => "password", :type => "password"}/
+      .span4
+        .control-group
+          .controls
+            %input#last-name{:placeholder => "last name", :type => "text"}
+        .control-group
+          .controls
+            %input#password-confirm{:placeholder => "confirm password", :type => "password"}
+      .span4
+        .control-group
+          .controls
+            %input#email-address{ :placeholder => "email address", :type => "email" }
+  .row.account-box
+    .row
+      %p.container-title BILLING ADDRESS
+    .span13.control-box.billing-control-box
+      .span8
+        .control-group
+          .controls
+            %input#address1-name{:placeholder => "address 1", :type => "text"}/
+        .control-group
+          .controls
+            %input#address2-field{:placeholder => "address 2 (apt, suit, unit)", :type => "text"}/
+      .span4
+        .control-group
+          .row
+            .span2
+              %input#city-name{:placeholder => "city", :type => "text"}/
+            .span1
+              .custom-select
+                .select-arrow
+                %select
+                  %option ST
+                  %option US
+        .control-group
+          .controls
+            %input#zipcode-field{:placeholder => "zipcode", :type => "text"}
+  .row.account-box
+    .row
+      %p.container-title CREDIT CARD INFO
+    .span13.control-box.credit-card-info-box
+      .row
+        .span8
+          .control-group
+            .controls
+              %input#full-name{:placeholder => "name on card", :type => "text"}/
+          .control-group
+            .controls
+              %input#phone-number{:placeholder => "**** **** **** 3182", :type => "text"}/
+        .span4
+          .control-group
+            .row
+              .span2
+                %label EXP. DATE
+              .span1
+                .custom-select
+                  .select-arrow
+                  %select
+                    %option 00
+                    %option 01
+                    %option 02
+                    %option 03
+                    %option 04
+                    %option 05
+              .span1{:style=>"width:10px;"}
+                %label{:style => "width:10px"} /
+              .span1
+                .custom-select
+                  .select-arrow
+                  %select
+                    %option 00
+                    %option 01
+                    %option 02
+                    %option 03
+                    %option 04
+                    %option 05
+          .control-group
+            .controls
+              %input#cvv-field{:placeholder => "cvv", :type => "text"}
+      .row
+        .span8
+          .control-group
+            .controls
+              %label.checkbox
+                %input{:type => "checkbox"}/
+                save this card
+
+  .row.last-row.checkout-box-control
+    .span3.offset9
+      %button.btn.btn-success{:type => "button"} PURCHASE PASS
+

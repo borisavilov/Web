@@ -1,0 +1,60 @@
+.row.home-page
+  .row.banner
+    .nav-bar.links
+      %ul
+        %li
+          %a{:href => "/contact"} GYM MANAGER
+        %li
+          %a{:href => "/faq"} SIGN IN
+    .row.inner-main
+      #sign-in-box.span2{:style=>"float:right;margin-right:10px;"}
+        %form.form-horizontal{:action => "#", :type => "POST"}
+          .row
+            %input#inputEmail{:placeholder => "user name", :type => "text"}/
+          .row
+            %input#inputPassword{:placeholder => "password", :type => "password"}/
+          .row
+            %label.checkbox
+              %input{:type => "checkbox", :style=>"width:10px;margin-left:-13px"}/
+              Remember me
+          .row
+            .span2{:style=>"margin-left:5px;width:70px;"}
+              %label Sign in with
+            .span1{:style=>"margin-left:0px;width:50px;"}
+              =link_to(image_tag('f.png'),"#")
+              =link_to(image_tag('t.png'),"#")
+          .row
+            %input{:type => "submit", :value => "SIGN IN", :style=>"margin-left: 5px;"}/
+
+    .row.logo-box
+      .logo
+        %h1 #{ link_to 'pop in gym!', '#'}
+        %h3 short-term gym passes on-the-go
+    .row.sign-controll-box
+      %form.form-horizontal{:action => "#", :type => "POST"}
+        .row
+          .span2{:style=>"margin-left:180px;"}
+            %label{:style=>"font-size: 30px; float: right; margin-top: 6px;"} SIGN UP
+          .span5{:style=>"margin-left:0px;"}
+            %input{:type=>"email",:placeholder=>"email address"}
+          .span1{:style=>"margin-left:14px;"}
+            %input{:type=>"submit",:value=>"GET START"}
+        .row
+          .span2.offset5
+            %label{:style=>"float:right;"} Or sign up with
+          .span1
+            =link_to(image_tag('f.png'),"#")
+            =link_to(image_tag('t.png'),"#")
+  .row.homepage-controls
+    .span3.col{:style=>"margin-left:170px;"}
+      %a{:href => "#"}
+        =image_tag('find-gym.png')
+        %p Find the nearest gym with the amenities you want.
+    .span3.col
+      %a{:href => "#"}
+        =image_tag('choose-pass.png')
+        %p Buy the pass that best suits your needs: 1-day, 4-day, or 1-month.
+    .span3.col
+      %a{:href => "#"}
+        =image_tag('go-workout.png')
+        %p Redeem your pass and go workout!

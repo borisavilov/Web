@@ -1,0 +1,35 @@
+.row-fluid.one-day-page
+  .row.banner
+    =link_to(image_tag("one-day.png"),"#")
+  .row.one-day-page-content
+    .content-box
+      .row
+        .span4
+          %strong John Doe
+        .span5
+          %label  has a pass at:
+      .row
+        .span4
+          %strong Gym Name
+      .row
+        .span12
+          %strong 123 Street City, ST (000)000-0000\
+      .row{:style=>"margin-top:10px;"}
+        .span3
+          %strong Status:
+        .span7
+          %p Not Activated
+      .row
+        .span3
+          %strong Expires:
+        .span5
+          %p 00/00/0000
+      .row
+        .span5
+          %strong Redeem Code:
+        .span4
+          %p JRX91P
+
+  .row
+    %button redeem
+

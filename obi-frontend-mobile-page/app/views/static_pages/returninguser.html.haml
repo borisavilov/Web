@@ -1,0 +1,79 @@
+.row.account-info
+  .row
+    .span5.timeline.offset4
+      .icon.first.active
+      .border.first.active
+      .icon.second.active
+      .border.second
+      .icon.third
+  %p.page-title
+    CHECKOUT
+  %small.label-comment you have selected:
+  .row.checkout-box
+    .row
+      .span3
+        %p PASS
+      .span3
+        %p LOCATION
+      .span3
+        %p PRICE
+      .span3
+        %p REMOVE
+    .span13.checkout-info-box
+      .span3.first-item
+        .control-group
+          .controls
+            =image_tag('product.jpg')
+        .control-group
+          .controls
+            %a{:href => "#"} Change Selection
+      .span3.second-item
+        .control-group
+          .controls
+            %p New Youk Health
+        .control-group
+          .controls
+            %p and Racquet
+        .control-group
+          .controls
+            %p 123 Street
+        .control-group
+          .controls
+            %p City, ST 00000
+        .control-group
+          .controls
+            %p (XXX)XXX-XXXX
+      .span3.third-item
+        .control-group
+          .controls
+            %p $15
+      .span3.fourth-item
+        .control-group
+          .controls
+            %p X
+  .row.return-user-box
+    .row
+      .span4
+        %p.container-title KEEP ON POPIN' JACKIE!
+      .span3.link-control
+        %a{:href=>'#'} Not you? Sign in
+    .span13.control-box.billing-control-box
+      .row
+        .span8
+          %label Use credit card:
+      .span7
+        .control-group
+          .controls
+            %input#card-name{:placeholder => "**** **** **** 0319", :type => "text"}/
+      .span3
+        .control-group
+          .controls
+            %input#cvv-field{:placeholder => "cvv", :type => "text"}
+      .span1.offset1
+      .row.use-another-card
+        .span8
+          %a{:href=>'#'} Use another credit card
+  .row.last-row.returninguser-control
+    .span4.offset9
+      %button.btn.btn-success{:type => "button"} PURCHASE PASS
+

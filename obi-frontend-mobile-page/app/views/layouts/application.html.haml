@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title POP IN GYM
+    =javascript_include_tag 'application'
+    =stylesheet_link_tag 'application'
+    =csrf_meta_tags
+  %body
+    .page-content
+      = render "layouts/header_mobile"
+      .row.page-wrapper
+        =render :partial => "layouts/body"
+        =render :partial => "layouts/footer"
+
+

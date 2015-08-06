@@ -1,0 +1,88 @@
+.container
+  .choosepass
+    .timeline.clearfix
+      .icon.active
+      .border.active
+      .icon.second.active
+      .border
+      .icon.third
+
+    .checkout-inner
+      %h1="Checkout"
+      %h4="You have selected"
+      .mainitems.clearfix
+        .heading-txt
+          Pass
+        .heading-txt
+          Location
+        .heading-txt
+          Price
+        .heading-txt
+          Remove
+        .mainItems-inner.clearfix
+          .itemRow.first
+            =image_tag('product.jpg')
+            %a{:href => "#"}
+              Change Selection
+          .itemRow
+            .location-txt
+              New York Health
+              and Racquet
+              123 Street
+              City, ST 00000
+              (XXX)XXX-XXXX
+          .itemRow
+            .price-txt
+              $15
+          .itemRow
+            .remove-item
+              X
+    .form-tabs.clearfix
+      .single-tab
+        %h3 Account info
+        .tabborder.clearfix
+          %input{:type => "text", :name => "fname", :placeholder => "First Name", :class => "input-checkout"}
+          %input{:type => "text", :name => "lname", :placeholder => "Last Name", :class => "input-checkout"}
+          %input{:type => "text", :name => "email", :placeholder => "E-mail address", :class => "input-checkout last"}
+          %input{:type => "password", :name => "password", :placeholder => "Password", :class => "input-checkout"}
+          %input{:type => "password", :name => "cpassword", :placeholder => "Confirm Password", :class => "input-checkout"}
+      .single-tab
+        %h3 BILLING ADDRESS
+        .tabborder.clearfix
+          %input{:type => "text", :name => "address-1", :placeholder => "address 1", :class => "input-checkout large"}
+          %input{:type => "text", :name => "lname", :placeholder => "city", :class => "input-checkout small"}
+          .custom-select
+            .select-arrow
+            %select
+              %option ST
+              %option NY
+              %option CA
+          %input{:type => "text", :name => "address-2", :placeholder => "address 2 (apt, suit, unit)", :class => "input-checkout large"}
+          %input{:type => "text", :name => "zip", :placeholder => "Zip Code", :class => "input-checkout"}
+        .single-tab
+          %h3 CREDIT CARD INFO
+          .tabborder.clearfix
+            %input{:type => "text", :name => "creditcard-name", :placeholder => "name on card", :class => "input-checkout large"}
+            %label.exp-date EXP. DATE
+            .custom-select
+              .select-arrow
+              %select
+                %option 00
+                %option 01
+                %option 02
+                %option 03
+                %option 04
+                %option 05
+            .custom-select
+              .select-arrow
+              %select
+                %option 00
+                %option 01
+                %option 02
+                %option 03
+                %option 04
+                %option 05
+            %input{:type => "text", :name => "creditcard-number", :placeholder => "card number", :class => "input-checkout large"}
+            %input{:type => "text", :name => "cvv", :placeholder => "CVV", :class => "input-checkout"}
+
+        %input{:type => "submit", :name => "checkout", :class => "submit-checkout", :value => "Purchase"}

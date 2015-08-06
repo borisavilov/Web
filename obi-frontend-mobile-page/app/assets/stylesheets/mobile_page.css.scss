@@ -1,0 +1,105 @@
+// Place all the styles related to the mobile-page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: mobile-page-button-font;
+  src: url('fonts/ITCFranklinGothicStd-BkCp.otf');
+}
+.page-content{
+  margin: 0px auto;
+  background-color: white;
+  width: 320px !important;
+}
+.header .wrapper-mobile{
+  background-image: url('logo-top-header.png');
+  height: 65px;
+  width: 320px;
+  a:hover{
+    background-color: transparent !important;
+  }
+  .logo{
+    text-decoration: none;
+    cursor: pointer;
+    img{
+      margin-top: 14px;
+      margin-left: 16px;
+    }
+  }
+  .links{
+    display: inline-block;
+    margin-left: 220px;
+    color: white;
+    float: right;
+    ul{
+      margin-right: 20px;
+      margin-top: -25px;
+      li{
+        list-style: none;
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        a{
+          text-decoration: none;
+          color: white;
+          font-family: custom_font;
+          font-size: 16px;
+          padding: 3px 5px;
+        }
+        a:hover{
+          border: 1px solid;
+          color: #b5e900;
+        }
+        a.current-menu{
+          color: #b5e900;
+        }
+      }
+    }
+  }
+}
+
+.one-day-page{
+  p{
+    margin: 0px !important;
+  }
+  .one-day-page-content [class*="span"] {
+    min-height: 10px !important;
+  }
+  .one-day-page-content{
+    padding: 10px;
+    .row{
+      margin-bottom: 0px;
+    }
+    .content-box{
+      width: 287px;
+      margin-left: 10px;
+      border: solid 1px #eaeaea;
+      border-radius: 3px;
+      padding: 5px;
+    }
+  }
+  button{
+    background: #b5e900;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    color: #474747;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: mobile-page-button-font;
+    margin-left: 10px;
+    padding: 10px 120px;
+    text-transform: uppercase;
+    float: left;
+    height: 40px;
+    border-radius: 2px;
+    &:hover{
+      color: #979797;
+    }
+  }
+  button.active{
+    background: #ffffff !important;
+    border: solid 1px #eaeaea;
+    border-radius: 2px;
+  }
+}

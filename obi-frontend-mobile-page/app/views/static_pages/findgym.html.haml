@@ -1,0 +1,71 @@
+.row.find-gym-page
+  .row
+    .span5.timeline.offset4
+      .icon.first.active
+      .border.first.active
+      .icon.second.active
+      .border.second
+      .icon.third
+  %p.page-title
+    FIND A GYM
+  .row.find-gym-box
+    .row
+      .span8
+        .input-append
+          %input#appendedInputButton.span2{:type => "text"}/
+          %button.btn{:type => "button"} Go!
+    .row
+      .span13.control-box.billing-control-box
+        .span6.find-result-box
+          .row.find-item
+            .span5
+              .row
+                %p New York Health and Racquet
+              .row
+                .span1.distance
+                  %small.label-distance 0.2 miles
+                .span4.star-icon
+            .span1.arrow-right
+              .icon-arrow-left
+          .row.find-item
+            .span5
+              .row
+                %p Crunch Fitness
+              .row
+                .span1.distance
+                  %small.label-distance 0.2 miles
+                .span4.star-icon
+            .span1.arrow-right
+              .icon-arrow-left
+          .row.find-item
+            .span5
+              .row
+                %p David Barton
+              .row
+                .span1.distance
+                  %small.label-distance 0.3 miles
+                .span4.star-icon
+            .span1.arrow-right
+              .icon-arrow-left
+          .row.find-item
+            .span5
+              .row
+                %p New Youk Sports Club
+              .row
+                .span1.distance
+                  %small.label-distance 0.3 miles
+                .span4.star-icon
+            .span1.arrow-right
+              .icon-arrow-left
+          .row.find-item
+            .span5
+              .row
+                %p Dolphin Fitness
+              .row
+                .span1.distance
+                  %small.label-distance 0.3 miles
+                .span4.star-icon
+            .span1.arrow-right
+              .icon-arrow-left
+        .span6.map-box
+          =image_tag('map-test.jpg')
