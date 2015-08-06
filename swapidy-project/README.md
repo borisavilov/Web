@@ -1,4 +1,4 @@
-Ruby on Rails eCommerce Project(NDA site integrate stripe and use the postgresql)
+Ruby on Rails eCommerce Project
 ==============================
 ### Features include:
 	* Ruby on Rails
@@ -25,9 +25,9 @@ I explain about the git branches in GitHUb
 
 There are 3 branches:
 
-	1. develop <br />
-	2. master-dev <br />
-	3. master <br />
+	1. develop
+	2. master-dev
+	3. master
 
 - Everyone should work on develop branch firstly:
 
@@ -54,7 +54,6 @@ There are 3 branches:
 	git push heroku master <br />
 
 - For overall, codes will go from:
-
 	develop -> master-dev -> master <br />
 	develop for everything we work <br />
 	master-dev for testing <br />
