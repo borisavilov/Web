@@ -1,0 +1,1223 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+@font-face {
+  font-family: "myriad";
+  src: url('/myriad.otf') format("truetype");
+}
+@font-face {
+  font-family: "myriad-b";
+  src: url('/myriad-b.otf') format("truetype");
+}
+@font-face {
+  font-family: "myriad-s";
+  src: url('/myriad-s.otf') format("truetype");
+}
+html{
+  height: 100%;
+}
+body{
+  padding-top: 0px;
+  background: whitesmoke;
+  height: 100%;
+}
+.navbar .brand {
+  display: inline-block;
+  height: 50px;
+  padding: 0;
+}
+
+.nav{
+  position: absolute;
+  top:10px;
+  font-size: 15px;
+}
+#nav_signup:hover{
+}
+#nav_login:hover{
+}
+#banner_logo{
+  height:200px;
+  width:400px;
+  position: relative;
+  right: 80px;
+}
+
+.btn{
+}
+#my_trade_ins{
+  display: none;
+  left: 1px;  /* change this to left: 1px; to put it on the left of the screen */
+  top: 200px;
+  height: 70px;
+  width: 70px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 5000;
+}
+#my_trade_ins a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#my_orders{
+  display: none;
+  left: 1px;  /* change this to left: 1px; to put it on the left of the screen */
+  top: 320px;
+  height: 70px;
+  width: 70px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 5000;
+}
+#my_orders a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#fbtab{
+  right:1px;  /* change this to left: 1px; to put it on the left of the screen */
+  top:275px;height:50px;width:50px;margin:0;padding:0;position:fixed;z-index:5000;
+}
+
+#fbtab a {
+  display:block;width:100%;height:100%;
+}
+#twtab{
+  right:1px;  /* change this to left: 1px; to put it on the left of the screen */
+  top:348px;height:50px;width:50px;margin:0;padding:0;position:fixed;z-index:5000;
+}
+
+#twtab a { 
+  display:block;width:100%;height:100%;
+}
+
+#s3slider {
+  width: 100%; /* important to be same as image width */
+  height: 500px; /* important to be same as image height */
+  overflow: hidden; /* important */
+  position: relative; 
+  z-index: 0; 
+  top: 71px;
+  margin-top: -30px;
+  min-height:500px;
+}
+ 
+#s3sliderContent {
+  width: 100%;
+  height: 10px;
+  position: relative;
+  top: 0;
+  margin-left: 0;
+  height: 100%;
+  min-height: 500px;
+  background: black;
+}
+ 
+.s3sliderImage {
+  position: absolute;
+  z-index: 80;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;  
+}
+
+.s3sliderImage img {
+position: relative;
+max-width:none;
+margin-left:-800px;
+left:50%;
+}
+ 
+.s3sliderImage span {
+    display: none;
+  
+    
+}
+ 
+/*content for sign up page*/
+#bg{
+  left: 0;
+  position: absolute;
+  top: 0;
+  max-height: 100%;
+  max-width: 100%;
+  z-index:-1;
+}
+
+#login_container,
+#signup_container {
+  top: 50%;
+  left: 50%;
+  position: fixed; 
+  width: 515px;
+  margin-top: -240px;
+  margin-left: -253px;
+  z-index: 0;
+}
+
+#signup_circle{
+}
+
+#fb_signup{
+  position: absolute;
+  top:170px;
+  height:60px;
+  width:306px;
+  left:80px;
+  z-index:1;
+}
+
+#signup_motto{
+  position: absolute;
+  height: 200px;
+  bottom: 0px;
+  left:0px;
+}
+.clear {
+  clear: both;
+}
+
+.content .container {
+  padding-top: 70px;
+}
+
+.min_height_containner {
+  min-height: 700px;  
+}
+
+.signup_field{
+  height: 20px;
+  color: red;
+}
+
+#signup_form{
+  position: absolute;
+  top: 120px;
+  left: 70px;
+}
+
+
+.footer {
+
+  width:100%;
+  margin: 0 auto -4em;
+  padding: 30px 0 30px 0;
+  background-color: whitesmoke;
+  height:400px;
+  border-top: 1px solid #ccc;
+  overflow:hidden;
+  font-family: 'myriad';
+}
+#footer_info{
+    text-align: center;
+    clear: both;
+    color: #666;
+
+}
+.footer ul{
+    border-top: 1px solid #E5E5E5;
+    padding-top: 10px;
+    color: #666;
+
+}
+.footer li{
+  display: inline;
+  margin-right: 20px;
+  color: #666;
+
+}
+.footer li a{
+  color: #666;
+}
+.container a,
+.container a:hover {
+  color: white;
+}
+
+.footer .container a,
+.footer .container a:hover {
+  color: #1D95CB;
+}
+
+h2{
+  color: #fa3e6e;
+}
+
+.s_category{
+  color:#fa3e6e;
+  font-family: "myriad-s";
+  margin-top: 21px;
+  margin-bottom: 25px;
+}
+.cat_choose{
+  color: #fa3e6e;
+}
+.button_for_sell a{
+  color: white;
+}
+.button_for_sell a:hover{
+  color: white;
+}
+.button_for_buy a{
+  color: white;
+}
+.button_for_buy a:hover{
+  color: white;
+}
+.item {
+  margin-bottom: 0px;
+}
+
+.login_or {
+  color: red;
+  position: absolute;
+  top: 245px;
+  left: 225px;
+  font-family: "myriad";
+}
+.login_or span {
+  color:#666666;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#fb_login{
+  position: absolute;
+  top: 170px;
+  height: 60px;
+  width: 306px;
+  left: 80px;
+  z-index: 1;
+}
+
+#login_form{
+  position: absolute;
+  top: 280px;
+  left: 40px;
+}
+#login_form .add-on {
+  height: 35.5px;
+  font-size:16px;
+  font-family: "myriad-s";
+  width: 150px;
+  padding-top: 10px;
+}
+#login_form #prependedInput{
+  height: 37.5px;
+  width: 200px;
+  font-family: "myriad";
+}
+#login_extras{
+  position: absolute;
+  top: 240px;
+  left: 220px;
+  z-index: 1;
+  font-family: "Lato",Calibri,Arial,sans-serif;
+  font-weight: bold;
+  color: #33B8E5;
+}
+.login_label{
+  font-weight: bold;
+}
+
+.profile_info_nav {
+  display: inline-block;
+  padding: 10px 15px 10px;
+  font-size: 14px;
+  font-family: 'myriad-s';
+  color: #666;
+}
+.profile_info_nav a,
+.profile_info_nav span {
+  float: none;
+  padding: 0;
+  color: #777777;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+}
+.profile_info_nav a:focus,
+.profile_info_nav a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.profile_info_nav a.plushoney_icon {
+  color: red;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.loader {
+  text-align: center;
+  vertical-align: middle;
+  display:block;
+}
+
+#popup-dialog.standard-popup {
+  width: auto;
+  margin-left: 0;
+  left: 50%;
+}
+
+#popup-box-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/black-transparent.png) repeat;
+  z-index: 99998;
+  opacity: 0.6;
+}
+
+.popup-box-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -467px;
+  padding: 25px;
+  width: 885px;
+  z-index: 99999;
+}
+
+.product_price{
+  font-size: 20px;
+  font-family: "myriad-s";
+}
+
+
+.headings_pink{
+  font-family: "myriad";
+  color: #fa3e6e;
+}
+.headings_pink_edit{
+  font-family: "myriad-s";
+  color: #fa3e6e;
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.honey_display{
+  color:red;
+}
+.help{
+  position: fixed;
+  right:0px;
+  top:220px;
+  z-index: 5000;
+
+}
+.honey_display img{
+  height:30px;
+  position: relative;
+  bottom:3px;
+}
+.show_honey_symbol{
+  position: relative;
+  bottom:3px;
+}
+
+.login_button{
+  font-size: 18px;
+  line-height: 23px;
+  min-width: 50px;
+  padding: 6px 20px 7px;
+  text-align: center;
+  background: #fa3e6e;
+  color: white;
+  text-decoration: none;
+  font-family: "myriad";
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  width: 60px;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.5), 
+      0 2px 2px rgba(0,0,0,0.3), 
+      0 0 4px 1px rgba(0,0,0,0.2); 
+
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,0.7);  
+
+}
+.login_button:hover{
+  background-color:#F9006E;
+}
+a.login_forgot{
+  color: #1c8bc5;
+  font-family: "myriad";
+  font-size: 15px;
+}
+a.login_forgot:hover {
+  color: #1c8bc5;
+  text-decoration: underline;
+}
+.login-footer {
+  font-family: "myriad";
+  position: absolute;
+  top: 490px;
+  left: 140px;
+  color: #6f6d65;
+  font-size: 16px;
+}
+.signup-footer {
+  font-family: "myriad";
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  color: #6f6d65;
+  font-size: 16px;
+}
+.signup-link a{
+  color: #1c8bc5;
+}
+.signup-link a:hover{
+  color: #1c8bc5;
+  text-decoration: underline;
+}
+.free_honey_info{
+  color: #666;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.email_invite input[type="text"]{
+  height: 40px;
+  width: 300px;
+}
+.email_invite_button {
+  font-size: 18px;
+  line-height: 23px;
+  min-width: 50px;
+  padding: 6px 20px 7px;
+  text-align: center;
+  background: #fa3e6e;
+  color: white;
+  font-family: "myriad-s";
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "myriad";
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.5), 
+      0 2px 2px rgba(0,0,0,0.3), 
+      0 0 4px 1px rgba(0,0,0,0.2); 
+
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,0.7);  
+
+}
+.email_invite_button:hover{
+  background-color:#F9006E;
+}
+
+#location_search{
+    font-family: "myriad-s";
+    padding-right: 17px;
+    height: 30px;
+    color: #666;
+    font-size: 15px;
+    background: #E8E8E8;
+    background-position: -48px 0;
+    background-repeat:no-repeat;
+    background-image: url("/assets/glyphicons-halflings.png");
+    background-size:14px 14px;
+    cursor: pointer;
+}
+#location_search:hover{
+  background: #CCCCCC;
+}
+.navbar_icon_location{
+  height:25px;
+  position: relative;
+  right:30px;
+  bottom: 7px;
+}
+.product_desc{
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+.email_info_fb{
+  margin-top: 50px;
+  position: relative;
+  margin-left: 0px;
+}
+.fb-connect{
+  width: 315px;
+}
+.email_info_or{
+  font-size: 20px;
+  color:white;
+  width: 30px;
+  position: relative;
+  top:20px;
+  left:380px;
+  padding: 10px;
+  padding-left: 20px;
+}
+.popup-box-wrapper .close-popup {
+  float: right;
+  margin-top: -45px;
+  margin-right: -40px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(/assets/close-popup.png) no-repeat;
+  text-indent: -9999px;
+  font-size: 0px;
+}
+.field_with_errors {
+  display: inline;
+}
+.sub_footer{
+  font-family: "myriad";
+  color: #ffffff;
+  font-size: 13px;
+  margin-left: 5px;
+}
+.sub_footer a{
+  color:white;
+  text-decoration: underline;
+}
+.sub_footer a:hover{
+  color:white;
+  text-decoration: none;
+}
+#input-prepend{
+  font-size: 15px;
+}
+.signup_button{
+  position: relative;
+  bottom:125px;
+}
+.edit_cc_info  a{
+  color:#38B4DE;
+}
+.edit_cc_info  a:hover{
+  text-decoration: underline;
+    color:#38B4DE;
+
+}
+.vote_location{
+  text-align: center;
+  width: 130px;
+  float: left;
+}
+.vote_city{
+  font-family: "myriad-s";
+    font-size: 25px;
+
+}
+.vote_count{
+  font-family: "myriad-b";
+  font-size: 35px;
+  color: #fa3e6e;
+}
+.vote_button{
+  height: 20px;
+  position: relative;
+  bottom:5px;
+  cursor:pointer;
+}
+.vote_container{
+margin-left: 70px;}
+.darkoverlay {
+  position:fixed;
+  top:-150px;
+  padding-top: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: medium none;
+  box-shadow: none;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  height: 280px;
+  padding-bottom: 20px;
+}
+#popup-dialog_add_money{
+  position: fixed;
+  top: 70px;
+  font-family: "myriad";
+}
+.icon_dollar{
+  font-size:30px;
+  margin-left: 100px;
+  margin-top: 30px;
+  font-family: "myriad-s";
+  position: relative;
+  top:40px;
+}
+.dollar_textbox{
+  height: 30px;
+  width: 130px;
+  font-size: 40px;
+  margin-left: 40px;
+  position: relative;
+  top:90px;
+}
+.payment_equal{
+  margin-left: 60px;
+  font-size: 30px;
+  position: relative;
+  top:40px;
+}
+.dollar_conversion{
+  position: relative;
+  bottom:230px;
+  margin-left: 380px;
+  height: 200px;
+
+}
+.left_menu{
+position: relative;
+}
+.left_menu a{
+ }
+.left_menu a:hover{
+  color:#38B4DE;
+  text-decoration: underline;
+}
+ul.location_typeahead li {
+  text-align: left;
+}
+ul.left_menu {
+  position: relative;
+  top: 65px;
+  right:100px;
+  text-align: left;
+  float: left;
+  width: 120px;
+    border-right: 1px solid #E5E5E5;
+    padding-right: 30px;
+}
+ul.left_menu li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: whitesmoke;
+}
+ul.left_menu li a {
+  color: #38B4DE;
+}
+.side-bar {
+    background: url("../images/background.png") repeat scroll 0 0 #EEEEEE;
+    border-right: 1px solid #AAAAAA;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+    top: 46px;
+    width: 325px;
+     bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+}
+.checkout_stuff{
+}
+.email_textfield{
+  height:30px;
+  margin-bottom: 20px;
+  background-color:#ECECEC;
+}
+.cc_head{
+  color:white;
+  font-family:'myriad'; 
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.cc_number_field{
+  margin-top: 10px;
+}
+
+.card-cvc{
+  width:40px;
+}
+.cc_secure{
+  margin-left: 480px;
+  font-size: 12px;
+  color: white;
+  position: relative;
+  top: 65px;
+}
+.cc_blank_message{
+  position: relative;
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+}
+.tab-pane active{
+  background:#38B4DE;
+}
+.motto_sub{
+  color:#666;
+  font-size: 20px;
+  font-family: 'myriad';
+  position: relative;
+  top:10px;
+}
+#q_honey{
+  position: relative;
+  bottom:10px;
+  right:15px;
+}
+#testimonials{
+  width:400px;
+  color:#666;
+  float: left;
+
+}
+.testimonial_title{
+  font-family:'myriad-s';
+}
+.testimonial_img{
+    float: left;
+    width:80px;
+    margin-right: 20px;
+}
+.testimonial_text{
+  font-family:'myriad';
+  font-size: 16px;
+}
+.testimonial_more {
+  text-align: right;
+  margin-left:240px;
+  text-decoration: underline;
+}
+#media{
+  width:100%;
+  float: left;
+  margin-left: 20px;
+}
+
+.media_title{
+  font-family:'myriad-s';
+  color:#666;
+}
+.media_img{
+  height: 60px;
+  margin-bottom: 50px;
+  float: left;
+}
+
+.media_pando{
+  margin-right: 80px;
+    margin-bottom: 50px;
+}
+.media_patch{
+    margin-right: 80px;
+}
+.media_hn{
+  margin-bottom: 50px;
+  margin-right: 80px;
+}
+#mcts1 
+{
+    width:550px;
+    height:180px;
+    margin: 0 auto;
+    background: url(loading.gif) no-repeat 50% 50%;
+    
+    /* Do not alter the below settings */
+    white-space:nowrap;
+    position:relative;
+    font-size:0px;
+}
+#mcts1>* {display:none;}
+  
+/*-------- div.item is each thumbnail's wrapper created by the javascript ------*/
+#mcts1 div.item 
+{
+    padding:0;
+    margin-right:0; /* this specifies the distance between each thumbnail */
+    border:none;
+    text-align:left;
+    position:relative;
+}
+
+/*-------- style of user defined class ---------*/
+#mcts1 div.each 
+{
+    white-space:normal;
+    padding:20px;
+    width:520px;
+    height:170px;
+    border-radius:6px;
+}
+
+#mcts1 .each .content 
+{
+    float:left;
+    padding-left:40px;
+    padding-right:20px;
+    font:normal 12px/14px Verdana;
+    width:280px;
+    height:144px;
+    overflow:auto;
+}
+#mcts1 .each img 
+{
+    border:none;
+    float:left;
+}
+
+
+/*---------navigation buttons-------*/
+#mcts1 .navPrev, #mcts1 .navNext, #mcts1 .navPlay, #mcts1 .navPause 
+{
+    width:45px; height:45px; position:absolute;  
+    background:url(navButtons.png); 
+    background-repeat: no-repeat;
+    display:inline-block; z-index:5; cursor:pointer;
+    top:100px;
+}
+#mcts1 .navPrev {background-position:0 0;left:-24px;}
+#mcts1 .navPrev:hover {background-position:0 -45px;}
+#mcts1 .navPrevDisabled {background-position:0 -90px;cursor:default;}
+
+#mcts1 .navNext {background-position:-45px 0px;right:-24px;} 
+#mcts1 .navNext:hover {background-position:-45px -45px;} 
+#mcts1 .navNextDisabled {background-position:-45px -90px; cursor:default;} 
+
+#mcts1 .navPause, #mcts1 .navPlay {display:none;}
+
+.navPrev, .navPlay, .navPause, .navNext 
+{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+
+        
+
+/* --------- Others ------- */
+#mcts1
+{
+  transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#index_head{
+height: 270px;
+position: absolute;
+top: 70px;
+line-height: 1.5;
+}
+
+#index_bg{
+height: 350px;
+width: 100%;
+height: 400px;
+}
+
+.index_text{
+  width: 430px;
+}
+
+.index_img{
+  height: 30px;
+}
+.index_bullets{
+  color:#333;
+  font-size: 18px;
+  font-family: 'myriad-s';
+}
+.index_success{
+  width: 450px;
+  position:relative;
+  margin-left: 50px;
+  bottom:400px;
+
+}
+.success_img{
+  height: 260px;
+margin-left: 20px;}
+.rope_left{
+  position: fixed;
+  top:0px;
+  left: 40px;
+}
+
+.rope_right{
+  position: fixed;
+  top:0px;
+  right: 40px;
+  z-index: 10000;
+}
+.media_imgs{
+  float:left;
+  width:400px;
+}
+.video_title{
+  float:left;
+  font-family:'myriad-s';
+  color:#666;
+}
+.password-warning{
+  display: none;
+}
+.index_buttons{
+    margin-top:220px;
+    cursor: pointer;
+
+}
+
+.index_buttons a{
+color:#666;
+  cursor: pointer;
+
+}
+.index_buttons a:hover{
+color:#666;
+cursor: pointer;
+
+}
+.index_button{
+  text-align: center;
+  width: 250px;
+  float: left;
+  font-size: 20px;
+  font-family: 'myriad-s';
+  cursor: pointer;
+}
+.button_2{
+  margin-left: 80px;
+}
+.button_3{
+  margin-left: 80px;
+}
+
+#index_header_title{
+position: absolute;
+top: 70px;
+left: 0px;
+width: 100%;
+min-width: 1020px;
+height: 200px;
+z-index: 0;
+background-color: #666;
+}
+.index_header_tagline{
+  margin-top: 60px;
+  margin-left: 350px;
+  position: relative;
+  right: 180px;
+  text-align: center;
+  color: white;
+  font-family: "myriad-s";
+  font-size: 35px;
+}
+.index_header_subtitle{
+  font-size: 20px;
+  position: relative;
+  top:20px;
+  text-align: center;
+}
+.index_instr{
+  font-size: 20px;
+  font-family: 'myriad';
+  color: #666;
+  text-align: center;
+  margin-left: 270px;
+}
+#index_usp{
+  position: absolute;
+  left: 0px;
+  margin-top: 100px;
+  height: 260px;
+  width: 100%;
+  min-width: 1020px;
+  background-color: #666;
+ }
+ .index_head_1 {
+  height: 30px;
+  position: relative;
+  top: 40px;
+  right:200px;
+  color: white;
+ }
+ .index_head_1_text{
+  font-size: 20px;
+  position: relative;
+  top: 40px;
+  right:190px;
+ }
+  .index_head_2 {
+  height: 30px;
+  position: relative;
+  top: 40px;
+  right:150px;
+  color: white;
+ }
+
+ .index_head_2_text{
+  font-size: 20px;
+  position: relative;
+  top: 40px;
+  right:140px;
+ }
+  .index_head_3 {
+  height: 30px;
+  position: relative;
+  top: 40px;
+  right:100px;
+  color: white;
+ }
+
+  .index_head_3_text{
+  font-size: 20px;
+  position: relative;
+  top: 40px;
+  right:80px;
+ }
+ .device_mashup{
+  margin-top: 700px;
+  position: relative;
+  right: 200px; }
+ .swapidy_motto{
+color: #666;
+font-size: 60px;
+text-align: center;
+position: relative;
+bottom:150px;
+right: 110px;
+font-family: 'myriad-s';
+z-index: 1000;
+
+ }
+.hiw_sketch{
+margin-top: 10px;
+}
+.learn_sell{
+  color: white;
+  text-decoration: underline;
+  position: relative;
+  right:60px;
+  bottom:55px;
+  font-size: 20px;
+  background:#fa3a6e;
+  height: 35px;
+  -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding: 10px;
+}
+.learn_swap{
+  position: relative;
+  left:60px;
+  bottom:55px;
+  font-size: 20px;
+  text-decoration: underline;
+    background:#fa3a6e;
+  height: 35px;
+  -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding: 10px;
+
+}
+.learn_buy{
+  position: relative;
+  left:190px;
+  bottom:55px;
+  font-size: 20px;
+  text-decoration: underline;
+    background:#fa3a6e;
+  height: 35px;
+  -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding: 10px;
+
+}
+
+#continue_button{
+  z-index:1000;
+}
+
+#buy-items{
+  margin:0;
+}
+
+#sell-items{
+  margin:0;
+}
+
+#drop_items{
+  overflow-y:auto;
+}
+a.how_can_swap{
+outline:none
+
+}
+
+.device_mashup_index{
+  width: 940px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  position: relative;
+  right:10px;
+}
+
+ .swapidy_motto_index{
+color: #666;
+font-size: 60px;
+text-align: center;
+font-family: 'myriad-s';
+z-index: 1000;
+margin-top: 100px;
+margin-bottom: 100px;
+ }
+
+ .success_img_index{
+  height: 260px;
+margin-left: 20px;}
+
+.index_testimonial{
+  height: 400px;
+}
+.index_success_index{
+  width: 450px;
+  position:absolute;
+  margin-left: 270px;
+  bottom:400px;
+}

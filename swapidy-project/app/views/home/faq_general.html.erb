@@ -1,0 +1,109 @@
+<style type="text/css">
+  body {
+    background: whitesmoke;
+  }
+  dt:hover {
+    cursor: pointer;
+  }
+  dt {
+    color: #38B4DE;
+    cursor: pointer;
+  }
+  dd {
+    color: #666;
+  }
+  .faq_cat{
+        color: #38B4DE;
+        font-size: 20px;
+        font-family: "myriad-s";  
+        margin-bottom: 10px;
+        cursor: pointer;
+        text-decoration: underline;
+  }
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    $('.container').fadeIn(1000);
+    // ---- FAQs ---------------------------------------------------------------------------------------------------------------
+
+    $('.faqs dd').hide();
+    // Hide all DDs inside .faqs
+    $('.faqs dt').hover(function() {
+      $(this).addClass('hover')
+    }, function() {
+      $(this).removeClass('hover')
+    }).click(function() {// Add class "hover" on dt when hover
+      $(this).next().slideToggle('normal');
+      // Toggle dd when the respective dt is clicked
+    });
+   
+    // Hide all DDs inside .faqs
+    $('.faq_cat').hover(function() {
+      $(this).addClass('hover')
+    }, function() {
+      $(this).removeClass('hover')
+    }).click(function() {// Add class "hover" on dt when hover
+      $(this).next().slideToggle('normal');
+      // Toggle dd when the respective dt is clicked
+    });
+
+  }); 
+</script>
+<div class="container" style="display:none; position:relative;">
+  <div class="headings_pink">FAQ</div>
+  <br/>
+  <dl>
+      <dt class="faq_cat">Swap</dt>
+      <dd> 
+          <dl class="faqs">
+            <dt>When do I get my swapped product? </dt>
+            <dd>This depends a lot on how fast you ship your product to us. As soon as you complete a swap transaction, we generate a prepaid shipping label for you so you can send your product to us. If you send your product on the same day, it can take up to 4 business days to arrive to us. It takes an additional day to examine your product in the condition it was described. Upon completion of examination, we ship your swapped product the same day. Typically, it takes 5 business days but can go up to 7 for the entire transaction to take place. To expedite the process, please ship your product as soon as you complete the transaction.</dd>
+
+            <dt>What if I don't have anything to swap? </dt>
+            <dd>That's okay! You're more than welcome to buy from us by clicking the "Buy" option on the homepage. We strive to have the lowest prices possible.</dd>
+
+            <dt>What happens when my product is worth more than what I want to swap for?</dt>
+            <dd>We will give you the remaining credit in your account that you can use for future swaps. </dd>
+
+            <dt>Can I redeem my remaining balance for cash? </dt>
+            <dd>No, not a this time. You may use your remaining balance for cash. If you'd like to get cash for your product, please select the "Sell" option. </dd>
+
+            <dt>What happens if I send a product that doesn't match Swapidy's description? </dt>
+            <dd>If the product doesn't match the description you selected, we will send the product back to you free of charge. </dd>
+
+            <dt>Will I get a tracking number for the swapped product? </dt>
+            <dd>Yes. As soon as we receive your product and it's good to go, we will ship you your newly swapped product and email you a tracking number. </dd>
+          </dl>
+      </dd>
+      <dt class="faq_cat">Sell</dt>
+      <dd>
+          <dl class="faqs">
+            <dt>How will I get paid? </dt>
+            <dd>We offer payments via Paypal or certified check. All you have to do is provide your Paypal email address or name for the certified check during the checkout process. </dd>
+
+            <dt>How fast will I get paid? </dt>
+            <dd>This depends on how fast you send us your product. It can take up to 4 business days to arrive at Swapidy if you send it on the same day you do the transaction. Upon receipt, we check if it's in the condition that it was described in and that can take up to a day. After successful examination, we send your payment right away. With Paypal, it can be as fast as 4 business days or less and with certified check, it can take up to 7 business days (these times include the time it takes to arrive at Swapidy). We strive to complete the transaction in the absolute fastest way possible. </dd>
+
+            <dt>Are there any other ways I can get paid? </dt>
+            <dd> At this time, we only pay out via Paypal and Certified Check. We're exploring new payment options. Drop us a line at support@swapidy.com if you have any ideas on pay out methods. </dd>
+          </dl>
+      </dd>
+
+      <dt class="faq_cat">Buy</dt>
+      <dd>
+          <dl class="faqs">
+            <dt>Why should I buy from Swapidy when I can just buy at the store? </dt>
+            <dd>On Swapidy, we have the lowest prices available on the internet and you don't have to pay any tax. On top of that, shipping is always FAST & FREE!</dd>
+
+            <dt>How long will it take to receive the products that I ordered? </dt>
+            <dd>It can take up to 4 business days after placing your order.</dd>
+
+            <dt>Will I get a tracking number once my item is shipped? </dt>
+            <dd>Yes. As soon as your order is placed, we will email you a tracking number.</dd>
+          </dl>
+      </dd>
+  </dl>
+</div>
+
+

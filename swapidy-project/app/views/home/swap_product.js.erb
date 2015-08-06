@@ -1,0 +1,20 @@
+$("#shopping_cart").html("<%= raw escape_javascript(@return_content[0]) %>");
+$("#drop_items").html("<%= raw escape_javascript(@return_content[1]) %>");
+<% unless ShoppingCart.cart_products_empty? %>
+  $("#shopping_cart").show();
+  $("#index_head").hide();
+  $('#index_bg').css('height',170);
+  <% if @changed_type && @changed_type == :sell %>
+	  $("#product_items .sell_display").hide();
+	  $("#product_items .sell_display").fadeIn('slow');
+  <% elsif @changed_type && @changed_type == :buy %>
+	  $("#product_items .buy_display").hide();
+	  $("#product_items .buy_display").fadeIn('slow');
+  <% end %>
+  display_checkout_sliders();
+<% end %>
+if(for_what == "for_buying"){
+  $('#done_button_for_buy').show();
+  $('#done_button').hide();
+  $('#checkout_button').hide();
+}

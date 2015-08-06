@@ -1,0 +1,119 @@
+<style type="text/css">
+body{
+  background:whitesmoke;
+
+}
+.content{
+  background: white;
+}
+#checkout_container{
+  display: none;
+}
+</style>
+<div class="content " style="height:600px;">
+  <div class = "row">
+    <%= render :partial => "steps", :locals => {:current_step => 3 } %>
+  </div>
+  <div class = "row container">    
+    <div class="headings_pink" style="position:relative; bottom:30px; text-align:center;">Shipping Address<span>*</span></div>
+    
+    <% if session[:shop_type]=="swap" %>
+      <div class="span8" style="margin-left: -80px;margin-top: 10px;">
+        <%= render :partial => "/orders/order_swap_product_images" %>
+      </div>      
+    <% else %>
+      <div class="span3 offset1">
+        <%= render :partial => "/orders/order_product_images" %>
+      </div>      
+    <% end %>
+      
+    <% if session[:shop_type]=="swap" %>
+    <div style="width:500px; position:relative; bottom:350px; left:550px;">
+      <form accept-charset="UTF-8" action="/orders/confirm" class="new_order" id="new_order" method="post" style="text-align: left; vertical-align: top; display: inline-block; position:relative;">
+          <input name='authenticity_token' value='<%= form_authenticity_token %>' type='hidden' />
+          <div class="render_form">
+            <%= render :partial => "/orders/shipping_form", :locals => {:order => @order, :submit_title => "Continue"} %>
+          </div>
+      </form>
+    </div>
+    <%else%>
+      <div style="width:500px; position:relative; bottom:100px; left:550px;">
+        <form accept-charset="UTF-8" action="/orders/confirm" class="new_order" id="new_order" method="post" style="text-align: left; vertical-align: top; display: inline-block; position:relative;">
+            <input name='authenticity_token' value='<%= form_authenticity_token %>' type='hidden' />
+            <div class="render_form">
+              <%= render :partial => "/orders/shipping_form", :locals => {:order => @order, :submit_title => "Continue"} %>
+            </div>
+        </form>
+      </div>
+    <%end%>
+  </div>
+
+<div id="popup-dialog_candidate_address_form" style="display:none; height:320px; padding: 0px; position: fixed; top: 60px;" class="popup-box-wrapper standard-popup">
+  <div id="dialog-content">
+    <div class="container" style="background-color: white; border-radius: 10px; height:340px; padding: 30px 20px; width:540px; margin-left:160px;" >
+      <a class="close-popup" onclick="hidePopup();" href="#" title="Cancel">Cancel</a>
+      <div class="render_form">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".container .new_order").submit(function() {
+    if($(this).hasClass("new_order")) {
+      $.ajax({
+        type : 'POST',
+        url : "/orders/change_shipping_info?step=3",
+        data : $(this).serialize(),
+        dataType : 'script',
+        success: function(data) {}
+      });
+      return false;
+    }else{
+      return true;
+    }
+  });
+  
+  $(".select_candidate_address").live("click", function() {
+    $("#order_shipping_address").attr("value", $(this).attr("data-address"));
+    $("#order_shipping_optional_address").attr("value", $(this).attr("data-optional_address"));
+    $("#order_shipping_city").attr("value", $(this).attr("data-city"));
+    $("#order_shipping_state").attr("value", $(this).attr("data-state"));
+    $("#order_shipping_zip_code").attr("value", $(this).attr("data-zip_code"));
+    $("#order_shipping_zip_code_add_on").attr("value", $(this).attr("data-zip_code_add_on"));
+    $("#order_is_candidate_address").attr("value", true);
+    $("#new_order").removeClass("new_order").submit();
+  });
+  
+  function continue_with_address(){
+    $("#new_order").removeClass("new_order").submit();
+  }
+
+  $(".form_element input").live("change", function() {
+    $("#continue_button").show();
+    $("#candidate_addresses_container").hide();
+    $("#order_is_candidate_address").attr("value", false);
+  });
+    
+  $(function() {
+  	order_sliders();
+  });
+
+	function order_sliders(){
+	$('.order_sell_display').jCarouselLite({
+      btnNext: ".next",
+      btnPrev: ".prev",
+      visible: 1,
+      circular: false,
+      speed: 400
+    });
+    $('.order_buy_display').jCarouselLite({
+      btnNext: ".next_buy	",
+      btnPrev: ".prev_buy",
+      visible: 1,
+      circular: false,
+      speed: 400
+    });
+	}
+</script>

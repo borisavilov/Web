@@ -1,0 +1,15 @@
+
+<div class="headings_pink">Forgot your password?</div><br/>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email,:class => "required email" %></div>
+  <div style="display: inline-block;">
+    <% unless resource.errors.empty? %>
+      <div class="alert alert-error" style="width:350px; padding-top: 4px;">There is no account associated to that email.</div>
+    <% end %>
+  </div>
+  <br />
+  <div style="display: inline-block;"><%= f.submit "Reset", :class => 'show_button_buy', :style => "bottom: 0px;" %></div>
+<% end %>

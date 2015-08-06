@@ -1,0 +1,32 @@
+<%= form_for(@payment, :as => 'payment', :url => "/payments/edit_card", :html => {:id => "add_honey_form"}) do |f| %>
+  <%= f.hidden_field :card_type %>
+  <%= f.hidden_field :card_last_four_number %>
+  <%= f.hidden_field :card_name %>
+  <%= f.hidden_field :card_expired_month %>
+  <%= f.hidden_field :card_expired_year %>
+  <%= f.hidden_field :new_stripe_card_token %>
+  <%= f.hidden_field :new_card_number %>
+  <%= f.hidden_field :new_card_type %>
+  <%= f.hidden_field :new_card_last_four_number %>
+  <%= f.hidden_field :new_card_name %>
+  <%= f.hidden_field :new_card_expired_month %>
+  <%= f.hidden_field :new_card_expired_year %>
+  <% if (params[:reload_payment_order_info] && params[:reload_payment_order_info] == "true") %>
+    <input type="hidden" name="reload_payment_order_info" value="true" />
+  <% end %>
+  <br/>
+  <div class="headings_pink_edit" style="margin-left:50px;">
+    How much Honey would you like to purchase?
+  </div>
+  <div style="height:250px;">
+    <div class="honey_conversion" style="background:url('/images/circle_200px_1.png') no-repeat;">
+      <%= f.text_field :honey_money,  :autocomplete => "off", :class =>'honey_textbox', :placeholder => 'Enter Honey amount' %><span class="payment_equal">=</span>
+    </div>
+    <div class="dollar_conversion" style="background:url('/images/circle_200px_2.png') no-repeat;">
+      <%= f.text_field :amount,  :autocomplete => "off", :class =>'dollar_textbox', :placeholder => 'Enter dollar amount' %>
+    </div>
+  </div>
+  <div class="error_message alert alert-error" style="text-align: center; display: none;">Please enter valid amounts.</div>  
+  <a href="#" id="add_honey_submit" class="show_button_buy submit_button" style="color:white; font-family:'myriad'; position:relative; top:10px; font-size:25px; margin-left:280px; padding:10px;"> Continue</a>
+  <br />
+<% end %>

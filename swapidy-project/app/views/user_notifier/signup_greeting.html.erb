@@ -1,0 +1,43 @@
+<div style="width:580px; margin:auto;">
+	<div style="background:#F2F2F2; margin-top:30px; padding:20px; -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;">
+		<div style="float:left;">
+			<a href="https://www.swapidy.com"><img src="https://www.swapidy.com/images/email/swapidy_logo_email.png"></a>
+		</div>
+		<div style="float:right;">	
+			<a href="http://facebook.com/swapidy"><img src="https://www.swapidy.com/images/email/fb_email.png"></a>
+			<a href="http://twitter.com/swapidy"><img src="https://www.swapidy.com/images/email/twitter_email.png"></a>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+		<div style="font-family:'Trebuchet MS', sans-serif; color:#666; font-size:14px; line-height:17px; ">
+			<b>Good Day <%= @user.name_in_email %>,</b><br/>
+			<br/>
+			Thank you for becoming part of the Swapidy instant selling, swapping, and buying platform. What are you waiting for? Get poppin' on Swapidy!<br/>
+			<br/>
+      <% if @need_password %>
+      Here are your login details:<br/>
+      <br/>
+      <b><%= @user.email %> </b><br/>
+      <br/>
+      <b><%= @user.password %></b><br/><br/>
+      As soon as you login with the credentials above by clicking <a href="https://www.swapidy.com">HERE</a>, make sure to change your password in Account Settings.  
+      <br/>
+      <br/>
+      <% else %>
+			Get started by clicking <a href="https://www.swapidy.com">HERE</a>. We'll show you how everything works as soon as you login :D<br/>
+	                <br/>
+      <% end %>
+			
+			Cheerio,<br/>
+			<br/>
+			<a href="http://www.twitter.com/theswapdaddy" style="color:#666666;"><b>@TheSwapDaddy</b></a><br/>
+			<a href="http://www.twitter.com/swapidy" style="color:#666666;"><b>@Swapidy</b></a><br/>
+		</div>
+	</div>
+</div>

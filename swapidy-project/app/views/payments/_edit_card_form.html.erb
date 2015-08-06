@@ -1,0 +1,24 @@
+<%= form_for(@payment, :as => 'payment', :url => "/payments/confirm", :html => {:id => "add_honey_form"}) do |f| %>
+
+  <%= f.hidden_field :card_type %>
+  <%= f.hidden_field :card_last_four_number %>
+  <%= f.hidden_field :card_name %>
+  <%= f.hidden_field :card_expired_month %>
+  <%= f.hidden_field :card_expired_year %>
+  
+  <% if (params[:reload_payment_order_info] && params[:reload_payment_order_info] == "true") %>
+    <input type="hidden" name="reload_payment_order_info" value="true" />
+  <% end %>
+  
+<div style="position:relative; top:40px;">
+  <%= render :partial => "/devise/shared/stripe_card_form", :locals => {:submit_form => "add_honey_form", :field_prefix => "payment_", :f => f, :user => @payment}%></div>
+
+  <% unless @payment.errors.empty? %>
+    <div class="alert alert-error" style="text-align: center;"><%= raw @payment.errors.full_messages.first %></div>
+  <% end %>
+
+  <div>
+    <a href="#" id="back_submit" class="show_button_buy" onclick="submit_back_form('/payments/new');" style="position:relative; top:20px;"> Back</a>
+    <a href="#" id="edit_card_submit" class="show_button_buy submit_button" style="position:relative; top:20px; left:10px;"> Continue</a>
+  </div>
+<% end %>

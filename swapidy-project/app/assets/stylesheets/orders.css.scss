@@ -1,0 +1,483 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.headings_pink{
+	color:#fa3e6e;
+}
+.confirm_subheading{
+	color:#666;
+  text-align:left;
+}
+#confirm_image{
+  position: absolute;
+  top: 0; bottom:0; left: 0; right:0;
+  margin: auto;
+
+}
+#before_confirm_image{
+  position: absolute;
+  top: 0; bottom:0; left: 0; right:0;
+  margin: auto;
+
+}
+
+table{
+	color:#666;
+}
+
+table th{
+	font-size: 20px;
+	color:#38B4DE;
+}
+table tr{
+	font-size:15px;
+}
+.order_button_sell{
+  text-align: center;
+  background: #0099FF;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 8px 15px;
+  font-family:"myriad";
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.5), 
+      0 2px 2px rgba(0,0,0,0.3), 
+      0 0 4px 1px rgba(0,0,0,0.2); 
+
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,0.7);  
+  margin-left: 0px;
+  margin-right: auto;
+  width: 220px;
+  height: 30px;
+}
+.order_button_sell:hover{
+  background: #00CCFF;
+}
+.order_button_buy{
+font-family:"myriad";
+  text-align: center;
+  background: #fa3e6e;
+  color: white;
+  font-size:20px;
+  font-family:'myriad';
+  height:40px;
+  width:215px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.5), 
+      0 2px 2px rgba(0,0,0,0.3), 
+      0 0 4px 1px rgba(0,0,0,0.2); 
+
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,0.7);  
+}
+.order_button_buy:hover{
+  background-color:#F9006E;      
+}
+.order_button_sell a{
+  color:white;
+}
+
+.order_button_sell a:hover{
+  color:white;
+}
+.order_button_buy a{
+  color:white;
+}
+
+.order_button_buy a:hover{
+  color:white;
+}
+
+.shipping_form_head{
+	font-family:"myriad-s";
+	color:#38B4DE;
+	text-align:center;
+	font-size:25px;
+  line-height:1.5;
+  position:absolute;
+  top:100px;
+}
+.confirm_info_head{
+  font-family:"myriad-s";
+  color:#38B4DE;
+  position:relative; bottom:80px;
+  font-size:16px;
+  line-height:1.5;
+  text-align:left;
+  margin-top:50px;
+}
+.change{
+	font-family:"myriad";
+	margin-left:150px;
+	font-size:15px;
+	color:white;
+	padding:5px;
+	height:50px;
+  position:relative;
+  bottom:30px;
+}
+a.change {
+	color:white;
+}
+a.change:hover {
+	color:white;
+}
+a.order_link{
+  color:#38B4DE;
+  cursor:pointer;
+  text-decoration:underline;
+}
+a.order_link:hover{
+  text-decoration:underline;
+    color:#38B4DE;
+    }
+label{
+  color:#666;
+  font-size:20px;
+}
+.thanks_heading{
+color:#fa3e6e;
+  font-size:30px;
+  font-family:"myriad-s";
+    margin-bottom:40px;
+
+}
+.thanks_subheading{
+  font-size:25px;
+}
+.thanks_img{
+  margin-bottom:40px;
+}
+.thanks_img_order{
+  margin-bottom:40px;
+  width:250px;
+}
+.thanks_list{
+  color:#666;
+  font-size:20px;
+  text-align:left;
+}
+.thanks_button_buy{
+  text-align: center;
+  background: #fa3e6e;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "myriad";
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.5), 
+      0 2px 2px rgba(0,0,0,0.3), 
+      0 0 4px 1px rgba(0,0,0,0.2); 
+
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,0.7);  
+  position:relative;
+  top: 50px;
+  right: 320px;
+}
+.thanks_button_buy:hover{
+  background-color:#F9006E;      
+}
+
+a.thanks_button_buy{
+  color:white;
+}
+
+a.thanks_button_buy:hover{
+  color:white;
+}
+.thanks_container{
+  margin-left:auto;
+  margin-right:auto;
+  width:800px;
+}
+.thanks_steps{
+float:left;
+  width:250px;
+  font-size:20px;
+  color:#666;
+  font-align:center;
+}
+.step2, .step1{
+margin-right:60px;
+}
+.step3{
+  margin-right:0px;
+}
+.thanks_steps_text{
+  margin-top:50px;
+  text-align:center;
+}
+.payment_button_sell{
+  width: 180px; 
+  height: 40px; 
+  padding:0px;
+  margin-top:20px;
+  font-family:"myriad";
+}
+
+.address_form_content{
+  padding-bottom:60px;
+}
+
+.field_col_1{
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 20px;
+}
+
+.field_col_2{
+  vertical-align: top;
+  display: inline-block;
+  border-left: 1px solid #E5E5E5;
+  padding-left: 20px;
+}
+
+.update_button_buy{
+  text-align: center;
+  background: #fa3e6e;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "myriad";
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.5), 
+      0 2px 2px rgba(0,0,0,0.3), 
+      0 0 4px 1px rgba(0,0,0,0.2); 
+
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,0.7);  
+  position:relative;
+  top:20px;
+  margin-left: 240px;
+}
+.update_button_buy:hover{
+  background-color:#F9006E;      
+}
+.shipping_form_head{
+font-family:"myriad";
+color:white;
+position:absolute;
+margin-left:340px;
+top:0px;
+height:30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: medium none;
+  box-shadow: none;
+  padding-top:20px;
+  padding-bottom: 20px;
+  padding-left:10px;
+  padding-right:10px;
+
+}
+.shipping_form_container{
+position:relative;
+bottom:250px;
+left:200px;
+width:450px; 
+height:350px;
+font-family: 'myriad', 'myriad-s';
+text-align: center;
+display: block;
+margin: 250px auto;
+
+}
+.shipping_form_image{
+    background-color: rgba(0, 0, 0, 0.6);
+  border: medium none;
+  box-shadow: none;
+  -webkit-border-radius: 20px;
+  border-radius: 20px 0px 0px 0px;
+  border-bottom-left-radius: 20px;
+  height: 410px;
+  padding-bottom: 20px;
+position:absolute;
+top:150px;
+margin: 0px auto 0px auto;
+margin-left:0px;
+width:360px;
+}
+.confirm_head_info{
+font-family:"myriad";
+color:white;
+position:absolute;
+margin-left:340px;
+top:0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: medium none;
+  box-shadow: none;
+  padding-top:20px;
+  padding-bottom: 20px;
+  padding-left:10px;
+  padding-right:10px;
+  }
+  .confirm_container{
+position:relative;
+bottom:190px;
+left:210px;
+width:450px; 
+height:450px;
+font-family: 'myriad', 'myriad-s';
+display: block;
+margin: 250px auto;
+background: white;
+font-size:16px;
+
+}
+.confirm_image_container{
+  
+position:absolute;
+top:130px;
+margin: 0px auto 0px auto;
+margin-left:0px;
+width:450px;
+}
+#shipping_label_info{
+  position:relative;
+  bottom:200px;
+  left:250px;
+}
+.confirm_payment_contianer{
+  position:relative;
+  bottom:320px;
+}
+.confirm_button_buy{
+font-family:"myriad";
+  text-align: center;
+  background: #fa3e6e;
+  color: white;
+  font-size:20px;
+  font-family:'myriad';
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.5), 
+      0 2px 2px rgba(0,0,0,0.3), 
+      0 0 4px 1px rgba(0,0,0,0.2); 
+
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,0.7);  
+  width:215px; 
+  height:40px;
+  position:relative;
+  bottom:380px;
+  left:120px;
+}
+.confirm_button_buy:hover{
+  background-color:#F9006E;      
+}
+
+.thank_container{
+position:relative;
+bottom:250px;
+height:500px;
+width:95%;
+font-family: 'myriad', 'myriad-s';
+text-align: center;
+display: block;
+margin: 260px auto;
+background: white;
+padding: 22px;
+
+}
+
+.thank_head{
+ font-family:"myriad";
+  color:white;
+  position:absolute;
+  top:0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: medium none;
+  box-shadow: none;
+  padding-top:20px;
+  padding-bottom: 20px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-left:160px;
+
+}
+.shipping_product_info{
+  font-family:'myriad-s';
+  font-size:20px;
+  color:#38B4DE;
+  padding-bottom: 15px;
+}
+.show_product_image{  
+  z-index:2;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: medium none;
+  box-shadow: none;
+  -webkit-border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
+  height: 280px;
+  padding-bottom: 20px;
+  position:absolute;
+  top:50px;
+  margin: 0px auto 0px auto;
+  margin-left:220px;
+  width:500px;
+}
+.show_product_image .show_product_img{
+  position: absolute;
+  top: 0; bottom:0; left: 0; right:0;
+  margin: auto;
+  }
+
+a.paypal-email-address{  
+  color: #4d90fe;
+  font-size: 14px;  
+  &:hover{
+    background-color: transparent;
+    text-decoration: underline;
+    color: #4d90fe;
+    cursor: pointer;
+  }
+}

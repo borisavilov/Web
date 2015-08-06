@@ -1,0 +1,171 @@
+<% if ShoppingCart.cart_products_empty? %>
+  <div>Empty Swapping Cart</div>  
+<% else %>
+	<%if session[:shop_type]=="swap" %>
+	<div style="display: block; margin-left:85px;">
+  	<img class="circ_arrow" src="/images/circular_arrow.png">
+  </div>
+ 	<% end %>
+  <div>
+	  <%if session[:shop_type]=="sell" || session[:shop_type]=="swap" %>
+	  <div class="order_slider_sell">
+	  	<% if session[:shop_type]=="swap" %>
+			<span class="old_stuff">My old stuff</span>
+			<% end %>
+		<% if session[:shop_type]=="sell" %>
+			<% if controller.action_name =="new" %>
+				<div style="height: 180px;width:200px; position: relative; margin-top: 50px;">
+			<% else %>
+				<div style="height: 180px;width:200px;">
+			<% end %>	   		 
+	  <% end %>
+	    <% if ShoppingCart.cart_products[:sell].count > 1 %>
+		    <button class="prev product_button_buy" style="width: 30px;position: absolute;top:10px;left:-150px;z-index: 1000">&lt;</button>
+		    <button class="next product_button_buy" style="width: 30px;position: absolute;top: 10px;left:30px;z-index: 1000;">&gt;</button>
+	 	  <% end %>
+	    <div class="order_sell_display" style="width: 100%;margin: auto; margin-left: -5px;">
+	  	  <ul id="mycarousel"  class="jcarousel-skin">
+			    <% ShoppingCart.cart_products[:sell].each do |order_product|%>
+			    	<li class="sell_img" style="height:400px;width: 200px"> <img style=" max-width: 160px; max-height: 400px;" src="<%= Product.find(order_product.product_id).main_image_url(:large) %>" /> 
+			    	<br/>
+			    	<span style="font-family:'myriad'; color:#666; font-size:20px;"> <%= order_product.title %></span> <br />
+			    	</li>
+		   		<% end %>
+		    </ul>
+		  </div>
+		  </div>
+		  </div>
+		  <% end %>
+		  <% if session[:shop_type]=="buy" || session[:shop_type]=="swap" %>
+			  <% if session[:shop_type]=="buy" %>
+			  	<div class="order_slider_buy" style="float: left;">
+			  <% else %>
+			  	<div class="order_slider_buy" style="float: right;">
+			  <% end %>
+
+		  	<% if session[:shop_type]=="swap" %>
+		 	  <span class="new_stuff">My new stuff</span>
+		 	 	<% end %>		 	 	
+		 	 	<div style="height: 180px;width:200px; position: relative;">
+		   
+		  	<% if ShoppingCart.cart_products[:buy].count > 1 %>
+		  		<% if session[:shop_type]=="swap" %>
+				  	<button class="prev_buy product_button_buy" style="width: 30px;top: 10px;right:170px;position: absolute;z-index: 1000; left: -110px">&lt;</button>
+				  <% else %>
+				  	<button class="prev_buy product_button_buy" style="width: 30px;top: 10px;right:170px;position: absolute;z-index: 1000; left: -150px">&lt;</button>
+				  <% end %>
+				  <button class="next_buy product_button_buy"style="width: 30px;top: 10px;right:0px;position: absolute;z-index: 1000">&gt;</button>
+		  	<% end %>
+		  <% if session[:shop_type] == "swap" %>
+				<% if controller.action_name =="new" %>  	
+			  	<div class="order_buy_display" style="width: 100%; text-align: right;margin-left: 40px;" >
+			  <% else %>
+			  	<div class="order_buy_display" style="width: 100%; text-align: right;margin-left: 25px;" >
+			 	<% end %>
+			<% else %>
+				<div class="order_buy_display" style="width: 100%; text-align: right;margin-left: 0px;" >
+			<% end %>
+		  	<ul id="mycarousel"  class="jcarousel-skin">
+		    	<% ShoppingCart.cart_products[:buy].each do |order_product| %> 
+		    		<li class="buy_img" style="height: 400px;width: 200px; margin-left:-5px;"> <img style=" max-width: 160px; max-height: 400px;"src="<%= Product.find(order_product.product_id).main_image_url(:large) %>" />
+		    		<br />
+			    	<span style="font-family:'myriad'; color:#666; font-size:20px;"> <%= order_product.title %></span> <br />
+		    		</li>
+		    	<% end %>
+		    </ul>
+	  	</div>
+	  	</div>
+	  </div>
+	  <% end %>
+	</div>
+	<%if session[:shop_type]=="swap" %>
+		<% if controller.action_name =="new" %>
+  		<div style="width: 100%; display: block;  margin-left: 280px; ">
+  	<% else %>
+  		<div style="width: 300px; display: block; position: relative; margin-left: 80px; margin-top: 250px;">
+  	<% end %>
+  	<img class="r_circ_arrow" src="/images/r_circular_arrow.png">
+  </div>
+ <% end %>
+<% end %>
+
+<style>
+	.jcarousel-skin li{ text-align: center;display:table-cell; }
+	#mycarousel li img { 
+    	vertical-align: middle;
+	}
+	.order_slider_sell{
+		position: relative;
+		height: 150px;
+		margin: 0;
+		width: 50%;
+		float: left;
+		display:inline-block
+	}
+	.order_slider_buy{
+		position: relative;
+		height: 150px;
+		margin: 0;
+		width: 50%;
+		float: right;
+		display:inline-block
+	}
+	.circ_arrow{
+	  height: 80px;
+	  position: relative;
+	  left: 5%;
+	  margin-left: -50px;
+	  top:100px;
+	}
+	.r_circ_arrow{
+	  height: 80px;
+	  position: relative;
+	  left: 5%;
+	  margin-left: -66px;
+	  margin-top: 60px;
+	}
+	.old_stuff, .new_stuff{
+	  margin-left: 50px;
+	  color: white;
+	  padding: 5px;
+	  position: relative;
+	  bottom: 20px;
+	  border-radius: 5px;
+	}
+	.old_stuff{
+	  color: #666;
+	  font-size: 20px;
+	}
+	.new_stuff{
+	  margin-left: 80px;
+	  color: #666;
+	  font-size: 20px;
+	  width: 100px;
+	}
+	.circ_arrow1{
+	  height: 70px;
+	  position: relative;
+	  left:160px;
+	}
+	.r_circ_arrow1{
+	  height: 70px;
+	  position: relative;
+	  top:240px;
+	  left: 20px;
+	  bottom:80px;
+	 
+	}
+	.circ_arrow2{
+	  height: 70px;
+	  position: relative;
+	  left:180px;
+	  top:50px;
+	}
+	.r_circ_arrow2{
+	  height: 70px;
+	  position: relative;
+	  top:220px;
+	  left: 40px;
+	  bottom:70px; 
+	}
+</style>

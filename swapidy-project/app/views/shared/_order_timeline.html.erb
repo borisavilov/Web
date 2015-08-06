@@ -1,0 +1,36 @@
+<% 
+  orders = current_user.orders
+  page_title = "Here's a list of all your transactions..."
+%>
+
+<% if orders.empty? %>
+  <label>You don't have any orders</label>
+<% else %>
+  <label><%= page_title %></label><br/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% orders.each_with_index do |order, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td>
+          	<% if order.calc_balance_amount < 0 %>
+              You pay: $<%= number_with_delimiter(-order.calc_balance_amount) %>
+            <% else %>
+              You get: $<%= number_with_delimiter(order.calc_balance_amount) %>
+            <% end %>
+          </td>
+          <td><%= order.status_title %></td>
+          <td><%= order.created_at.strftime("%H:%M %b %d, %Y") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

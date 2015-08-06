@@ -1,0 +1,116 @@
+// Place all the styles related to the notifications controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#notification_menu .dropdown-menu .all_new {
+  max-height: 300px;
+  overflow: auto;
+  width: 300px;
+  text-align: center;
+  z-index:5000;
+}
+
+#notification_menu .dropdown-menu li .notification_row {
+  display: block;
+  padding: 5px 10px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #333333;
+  width: 280px;
+  text-align: left;
+}
+#notification_menu .dropdown-menu li .notification_row:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #38b4de;
+  background-image: -moz-linear-gradient(top, #38b4de, #38b4de);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#38b4de), to(#38b4de));
+  background-image: -webkit-linear-gradient(top, #38b4de, #38b4de);
+  background-image: -o-linear-gradient(top, #38b4de, #38b4de);
+  background-image: linear-gradient(to bottom, #38b4de, #38b4de);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#38b4de', endColorstr='#38b4de', GradientType=0);
+}
+#notification_menu .dropdown-menu .notification_title {
+  display: inline-block;
+  white-space: normal;
+  cursor:pointer; 
+  width: 260px;
+  padding: 0;
+}
+#notification_menu .dropdown-menu .notification_remove_icon {
+  display: inline-block; 
+  cursor: pointer; 
+  float: right; 
+  width: 15px;
+  font-family:"myriad-s";
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.notification_remove_icon:hover {
+}
+.new_notification_row {
+  border-color: #D59392;
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.new_notification_row:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0081c2;
+  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+}
+
+#notification_menu .dropdown-menu .see_all,
+#notification_menu .dropdown-menu .clear_all {
+  text-align: center;
+}
+#notification_menu .dropdown-menu .clear_all {
+  color: red;
+}
+
+/* For side-bar screens */
+.nav-tabs a{
+  width: 300px;
+  color:#666;
+  font-size: 20px;
+  font-family: "myriad-s";
+  padding: 17px 19px;
+}
+.nav-tabs a:hover{
+  cursor:pointer;
+}
+.core-side{
+  height: 100%;
+  left: 325px;
+  right: 0;
+  top: 141px;
+  position: absolute;
+}
+.core-side-content{
+  background: none repeat scroll 0 0 #FDFDFD;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+.core-side .tab-content {
+   min-height: 600px;
+}
+.nav_text{
+  margin-left: 50px;
+}
+.content .core-side .footer .container {
+  padding-top: 0px;
+  width: 100%;
+}
+.content .core-side .footer {
+  width: 100%;
+}

@@ -1,0 +1,57 @@
+<style type="text/css">
+body{
+}
+.content{
+  height: 700px;
+  background: white;
+}
+
+#checkout_container{
+  display: none;
+}
+</style>
+<div class="content" style="">
+
+<%= render :partial => "steps", :locals => {:current_step => 2 } %>
+<div class="new_order_content_page" style="margin-top:30px;height:285px;">
+  <div class="row">
+    <div class="headings_pink" style="text-align:center;">Payment Information</div><br/>
+  </div>
+  <div class="row">
+    <%= render :partial => "order_new" %>    
+  </div>   
+</div>
+<script language="JavaScript">
+  function reload_payment_order_info() {
+    $.ajax({
+      type : 'POST',
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+      url : '/orders/reload_payment_order_info',
+      dataType : 'script',
+      success: function(data) {}
+    });
+  }
+  
+  $(function() {
+  	order_sliders();
+  });
+
+	function order_sliders(){
+	  $('.order_sell_display').jCarouselLite({
+      btnNext: ".next",
+      btnPrev: ".prev",
+      visible: 1,
+      circular: false,
+      speed: 500
+    });
+    $('.order_buy_display').jCarouselLite({
+      btnNext: ".next_buy	",
+      btnPrev: ".prev_buy",
+      visible: 1,
+      circular: false,
+      speed: 500
+    });
+	}
+
+</script>
+

@@ -1,0 +1,38 @@
+<div id="signup_container">
+  <img id="signup_circle" src="/images/login_rectangle.png" >
+  <% if show_cancel_link %>
+    <a class="close-popup" onclick="hidePopup();" style="position:relative; top:30px; right:95px;" href="#" title="Cancel">Cancel</a>
+  <% end %>
+  <a href="<%= user_omniauth_authorize_path(:facebook)%>"><img id="fb_signup" src="/images/fb_signup.png"></a>
+  <p class="login_or">
+    <span>or</span>
+  </p>
+  <div id="login_form">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource), :method => :post) do |f| %>
+      <div class="input-prepend">
+        <span class="add-on signup_add-on">E-mail</span>
+        <%= f.email_field :email, :class => "span2", :placeholder => "E-mail address", :id => "prependedInput" %>
+      </div>
+      <div class="input-prepend">
+        <span class="add-on signup_add-on">Password</span>
+        <%= f.password_field :password, :class => "span2", :id => "prependedInput"  %>
+      </div>
+      <div class="input-prepend" style="padding-bottom: 5px;">
+        <span class="add-on signup_add-on">Confirm Password</span>
+        <%= f.password_field :password_confirmation, :class => "span2", :id => "prependedInput"  %>
+      </div>
+      <a href="#" onclick="submit_signup_form();" class="login_button" style="position:relative;">Sign up</a>
+      <div style="display: inline-block; ">
+        <% unless resource.errors.empty? %>
+          <div class="alert alert-error" style="width:245px; margin-left: 5px;"> <%= raw resource.errors.full_messages.first %>. </div>
+        <% end %>
+      </div>
+    <% end %>
+  <div class="signup-footer">
+    <p class="signup-link" style="position:relative; bottom:30px;">
+      Already have a login? <a rel="internal silent" href="javascript:refresh_signin_form()">Sign In.</a>
+    </p>
+  </div>
+  </div>
+  <div class="sub_footer">By signing up, you agree to our <a href="/terms">Terms of Service</a> and have read our <a href="/privacy">Privacy Policy</a>.</div>
+</div>

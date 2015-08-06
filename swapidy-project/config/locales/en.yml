@@ -1,0 +1,61 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  admin:
+    actions:
+      resend:
+        title: "Re-send Stamp"
+        menu: "Re-send Stamp"
+        breadcrumb: "Re-send Stamp"
+        link: "Re-send Stamp"
+        bulk_link: "Re-send Stamp"
+        member: "Re-send Stamp"
+        done: "Re-send"
+      complete:
+        title: "Complete"
+        menu: "Complete"
+        breadcrumb: "Complete"
+        link: "Complete"
+        bulk_link: "Complete"
+        member: "Complete"
+        done: "Completed"
+      decline:
+        title: "Decline"
+        menu: "Decline"
+        breadcrumb: "Decline"
+        link: "Decline"
+        bulk_link: "Decline"
+        member: "Decline"
+        done: "Declined"
+      cancel:
+        title: "Cancel"
+        menu: "Cancel"
+        breadcrumb: "Cancel"
+        link: "Cancel"
+        bulk_link: "Cancel"
+        member: "Cancel"
+        done: "Cancelled"
+      reminder:
+        title: "Reminder"
+        menu: "Reminder"
+        breadcrumb: "Reminder"
+        link: "Reminder"
+        bulk_link: "Reminder"
+        member: "Reminder"
+        done: "Remindered"
+      delivery:
+        title: "Delivery"
+        menu: "Delivery"
+        breadcrumb: "Delivery"
+        link: "Delivery"
+        bulk_link: "Delivery"
+        member: "Delivery"
+        done: "Delivery"
+  
+  helpers:
+    label:
+      product:
+        using_condition: 'Condition'
+        for_sell: 'For selling'
+        for_buy: 'For buying'

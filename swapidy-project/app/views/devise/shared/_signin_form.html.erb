@@ -1,0 +1,37 @@
+<div id="login_container"  class="container" >
+  <img id="login_circle" src="/images/login_rectangle.png">
+  <% if show_cancel_link %>
+    <a class="close-popup" onclick="hidePopup();" style="position:relative; top:30px; right:95px;" href="#" title="Cancel">Cancel</a>
+  <% end %>
+  <a href="<%= user_omniauth_authorize_path(:facebook)%>"><img id="fb_login" src="/images/fb_login.png"></a><br/><br/>
+  <p class="login_or">
+    <span>or</span>
+  </p>
+  <div id="login_form">
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource), :method => :post) do |f| %>
+      <div class="input-prepend">
+        <span class="add-on">E-mail</span>
+        <%= f.email_field :email, :class => "span2", :placeholder => "E-mail address", :id => "prependedInput" %>
+      </div><br/>
+      <div class="input-prepend" style="padding-bottom: 5px;">
+        <span class="add-on">Password</span>
+        <%= f.password_field :password, :class => "span2", :id => "prependedInput"  %>
+      </div><br/>
+      <a href="#" onclick="submit_signin_form();" class="login_button" style="position:relative; top:15px;">Sign in</a>
+      <div style="display: inline-block; ">
+        <div class="alert alert-error" style="display:none; width:255px; margin-left: 5px; position:absolute; top:130px;">Invalid username/password. </div>
+        <% if controller_name != 'passwords' %>
+          <a href="<%= new_password_path(resource_name) %>" style="position: absolute; left: 160px;" class="login_forgot">Forgot your password?</a>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="login-footer">
+    <p class="signup-link">
+      Don't have a login? <a rel="internal silent" href="javascript:refresh_signup_form();">Sign Up.</a>
+    </p>
+  </div>
+  <div class="sub_footer">By signing in, you agree to our <a href="/terms">Terms of Service</a> and have read our <a href="/privacy">Privacy Policy</a>.</div>
+  
+</div>

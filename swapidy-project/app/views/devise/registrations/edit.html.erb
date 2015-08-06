@@ -1,0 +1,51 @@
+<div class="content">
+  <div class="container">
+    <div class="side-bar">
+      <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs" style="position: relative; margin-top: 40px;">
+          <li id="li_user_setting" class="tab">
+            <a href="#user_setting" data-toggle="tab"><span class='nav_text'><img src="/images/icon_user_setting.png">&nbsp;User settings</span></a>
+          </li>
+          <li id="li_stripe_card" class="tab">
+            <a href="#stripe_card" data-toggle="tab"><span class='nav_text'><img src="/images/icon_cc.png">&nbsp;Credit card information</span></a>
+          </li>
+        </ul>
+      </div>
+    </div> 
+    <div class="core-side">
+      <div class="core-side-content">
+        <div class="tab-content">
+          <div class="tab-pane active" id="user_setting">
+            <br/>
+            <%= render :partial => "/devise/registrations/user_setting"%>
+          </div>
+          <div class="tab-pane" id="stripe_card">
+            <br/>
+            <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :id => "edit_profile" }) do |f| %>
+	            <div class="headings_pink" style="position:relative; text-align: left;">Provide Credit Card Information</div>
+              
+              <%= render :partial => "/devise/shared/stripe_card_form",:locals => {:submit_form => "edit_profile",:field_prefix => "user_", :f => f, :user => resource}%>
+        	    
+              <% if params[:update_credit_card] && !resource.errors.empty? %>
+                <div class="alert alert-error" style="width: 688px;"> <%= raw resource.errors.full_messages.first %>. </div>
+              <% end %>
+              <% if params[:update_credit_card] && flash[:update_account_notice] %>
+                <div class="alert alert-success" style="width: 688px;"> <%= raw flash[:update_account_notice] %>. </div>
+              <% end %>
+        	    <input type="button" value="Update" class="show_button_buy" onclick="javascript:edit_profile_card_validate();" />
+        	    <input type="hidden" name="update_credit_card" value="true" />
+        		<% end %>
+          </div>
+        </div>
+      </div>
+      <%= render :partial => "/layouts/footer.html" %>
+    </div>
+  </div>
+</div>
+<script>
+  <% if params[:update_credit_card] %>
+    $('#li_stripe_card a').tab('show');
+  <% else %>
+    $('#li_user_setting a').tab('show');
+  <% end %>
+</script>

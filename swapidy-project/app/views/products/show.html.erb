@@ -1,0 +1,12 @@
+<div class="content" >
+	<div class="container">
+	  <div class="show_product_image">
+	    <img class="show_product_img" src="<%= @product.main_image_url(:large) %>">  
+	  </div>
+		<div class="checkout_stuff">
+	    <div class="show_container">
+	      <%= render :partial => "/products/detail_info"%>
+	    </div>
+	  </div>
+	</div>
+</div>
