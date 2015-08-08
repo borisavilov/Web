@@ -1,0 +1,12 @@
+<div>
+    <div class="col-xs-3">
+        <a class="list-group-item"
+           ng-repeat="report in reportsList | orderBy: orderProp"
+           ng-class="{active: selectedItem == report.id}"
+           ng-href="#/list/admin/{{report.id}}"
+           ng-click="selectItem(report.id)">{{report.name}}</a>
+    </div>
+    <div class="col-xs-9" ui-view>
+
+    </div>
+</div>

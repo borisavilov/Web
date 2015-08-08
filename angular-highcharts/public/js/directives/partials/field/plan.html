@@ -1,0 +1,14 @@
+<plan>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">{{field.label}} :</label>
+
+        <div class="col-sm-8">
+            <select ui-select2 multiple ng-model="myModel" data-placeholder="{{field.placeHolder}}"
+                    class="form-control input-sm">
+                <optgroup ng-repeat="category in field.options" label="{{category.text}}">
+                <option ng-repeat="option in category.children" value="{{option.id}}">{{option.text}}</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+</plan>

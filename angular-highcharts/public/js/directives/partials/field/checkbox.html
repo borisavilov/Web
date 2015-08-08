@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label class="col-sm-3 control-label">{{field.label}}</label>
+
+    <div col-sm-8>
+        <div ng-repeat="option in field.options" class="checkbox-inline">
+            <label class="checkbox-inline">
+                <input type="checkbox" value="{{option.id}}" ng-required="field.required"/>
+                {{option.title}}
+            </label>
+        </div>
+    </div>
+</div>

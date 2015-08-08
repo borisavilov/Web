@@ -1,0 +1,205 @@
+{
+    "formConfig": {
+        "burnUpBy": "release",
+        "planningFolderId": "",
+        "fields": {
+            "params": [
+                {
+                    "label": "PlanningFolder",
+                    "name": "planning-folder-id",
+                    "type": "plan",
+                    "model": "formConfig.planningFolderId",
+                    "placeHolder": "Type to Select a Planning Folder..."
+                },
+                {
+                    "label": "Burn Up By",
+                    "name": "burn-up-by",
+                    "model": "formConfig.burnUpBy",
+                    "type": "select",
+                    "options": [
+                        {
+                            "id": "release",
+                            "title": "Release"
+                        },
+                        {
+                            "id": "sprint",
+                            "title": "Sprint"
+                        }
+                    ]
+                }
+            ],
+            "display": [
+                {
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "model": "chartConfig.title.text"
+                },
+                {
+                    "label": "Subtitle",
+                    "name": "sub-title",
+                    "type": "text",
+                    "model": "chartConfig.subtitle.text"
+                },
+                {
+                    "label": "Display Type",
+                    "name": "display-type",
+                    "type": "select",
+                    "model": "chartConfig.options.chart.type",
+                    "options": [
+                        {
+                            "id": "line",
+                            "title": "Line"
+                        },
+                        {
+                            "id": "spline",
+                            "title": "Smooth line"
+                        },
+                        {
+                            "id": "area",
+                            "title": "Area"
+                        },
+                        {
+                            "id": "column",
+                            "title": "Column"
+                        },
+                        {
+                            "id": "bar",
+                            "title": "Bar"
+                        },
+                        {
+                            "id": "scatter",
+                            "title": "Scatter"
+                        }
+                    ]
+                }
+            ]
+        }
+
+    },
+    "chartConfig": {
+        "options": {
+            "chart": {
+                "type": "column"
+            },
+            "colors": ["#f28f43",
+                "#77a1e5",
+                "#c42525",
+                "#a6c96a"]
+        },
+        "credits": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "symbol": "circle"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Scope",
+                "data": [
+                    {
+                        "y": 100,
+                        "name": "28/4/2013"
+                    },
+                    {
+                        "y": 120,
+                        "name": "26/5/2013"
+                    },
+                    {
+                        "y": 110,
+                        "name": "29/5/2013"
+                    },
+                    {
+                        "y": 80,
+                        "name": "21/7/2013"
+                    }
+                ]
+            },
+            {
+                "name": "Scope Change Trend",
+                "data": [
+                    {
+                        "y": 90,
+                        "name": "28/4/2013"
+                    },
+                    {
+                        "y": 70,
+                        "name": "21/7/2013"
+                    }
+                ]
+            },
+            {
+                "name": "Total Effort Done",
+                "data": [
+                    {
+                        "y": 110,
+                        "name": "28/4/2013"
+                    },
+                    {
+                        "y": 130,
+                        "name": "10/5/2013"
+                    },
+                    {
+                        "y": 100,
+                        "name": "19/5/2013"
+                    },
+                    {
+                        "y": 120,
+                        "name": "20/5/2013"
+                    },
+                    {
+                        "y": 150,
+                        "name": "30/5/2013"
+                    },
+                    {
+                        "y": 130,
+                        "name": "1/5/2013"
+                    },
+                    {
+                        "y": 140,
+                        "name": "21/7/2013"
+                    }
+                ]
+
+            },
+            {
+                "name": "Velocity",
+                "data": [
+                    {
+                        "y": 110,
+                        "name": "28/4/2013"
+                    },
+                    {
+                        "y": 130,
+                        "name": "21/7/2013"
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Release Burn-up report"
+        },
+        "subtitle": {
+            "text": "Testing Report for POC"
+        },
+        "xAxis": {
+            "type": "datetime",
+            "gridLineWidth": 1,
+            "gridLineDashStyle": "shortdot",
+            "title": {
+                "text": "Date"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "gridLineDashStyle": "shortdot",
+            "title": {
+                "text": "Backlog Effort"
+            }
+        }
+    }
+}
