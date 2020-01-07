@@ -1,7 +1,7 @@
 Website and Backend
 ==============================
 Features include:
-* Ruby on Rails, CakePHP, Codeigniter, Zend
+* Laravel, CakePHP, Codeigniter, Zend, Ruby on Rails
 * Heroku, Amazon S3, Solr, Redis,
 * Google Map, Image Processing, Push Notification
 * PHP5, CSS3, HTML5, DHTML, Bootstrap  
